@@ -1,0 +1,83 @@
+.eni-alert {
+    width: 300px;
+    padding: 12px 16px 12px 12px;
+    border-radius: 4px;
+	margin-bottom: 20px;
+}
+
+.eni-alert svg {
+    width: 32px;
+    height: 32px;
+	display: inline-block;
+	vertical-align: top;
+}
+.eni-solo-arrow{
+	position: absolute;
+	top: calc(50% - 3px);
+	right: 6px;
+
+}
+.eni-alert-message {
+	width: 85%;
+	height: 100%;
+	display: inline-block;
+    margin-left: 8px;
+	margin-top: 5px;
+	font-family: $OpenSansRegular;
+	font-size: 16px;
+	position: relative;
+}
+
+.eni-alert span {
+	display: block;
+}
+
+.eni-alert-link {
+	margin-top:	8px;
+	cursor: pointer;
+	text-decoration: none;
+	font-family: $OpenSansSemiBold;
+	font-size: 16px;
+}
+
+.eni-alert-link:hover {
+	text-decoration: underline !important;
+}
+
+.eni-alert-link:focus {
+	text-decoration: underline !important;
+}
+
+.eni-alert-info {
+    background-color: $eniBleuNormalWithOpacity;
+    color: $eniBleuNormal;
+}
+
+.eni-alert-info .eni-alert-link {
+	color: $eniBleuNormal;
+}
+
+.eni-alert-success {
+    background-color: $eniVertDarkWithOpacity;
+    color: $eniVertDark;
+}
+
+.eni-alert-success .eni-alert-link {
+    color: $eniVertDark;
+}
+
+.eni-alert-error {
+    background-color: $eniRougeNormalWithOpacity;
+    color: $eniRougeNormal;
+}
+
+.eni-alert-error .eni-alert-link {
+    color: $eniRougeNormal;
+}
+
+.eni-alert-icon {
+    width: 9px !important;
+    height: 9px !important;
+	vertical-align: middle !important;
+	margin-left: 5px;
+}

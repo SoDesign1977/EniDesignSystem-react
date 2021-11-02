@@ -1,0 +1,77 @@
+
+
+.eni-tooltip {
+  position: relative;
+  display: inline-block;
+
+}
+
+.eni-tooltip:hover .eni-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.eni-tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+
+  white-space: break-spaces;
+	background-color: $eniGrisDarker;
+	padding: 8px;
+  border-radius: 4px;
+  color: $eniBlanc;
+  text-align: center;
+  @extend %TextXsmall;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  &::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  &.left {
+    right: 100%;
+    &::after {
+	
+      top: 30%;
+      left: 100%;
+	  transform: rotate(
+		-90deg);
+    }
+  }
+  &.right {
+
+    left: 100%;
+    &::after {
+      top: 30%;
+      right: 100%;
+	  transform: rotate(
+		90deg);
+    }
+  }
+
+  &.bottom {
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    &::after {
+      bottom: 100%;
+      left: 50%;
+	  transform: rotate(
+		180deg);
+    }
+  }
+  &.top {
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    &::after {
+      top: 100%;
+      left: 50%;
+    }
+  }
+}

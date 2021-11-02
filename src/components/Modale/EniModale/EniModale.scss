@@ -1,0 +1,80 @@
+.eni-modale {
+  @extend %cover;
+  @extend %center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  &.eni-modale-info,&.eni-modale-success,&.eni-modale-error .eni-modale-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    & > * {
+      margin-bottom: 8px;
+
+      @include media("Mobile") {
+        margin-bottom: 12px;
+      }
+
+
+    }
+  }
+  &.eni-modale-info .eni-modale-container{
+    border: 2px solid $eniBleuNormal;
+  }
+  &.eni-modale-success .eni-modale-container{
+    border: 2px solid $eniVertDark;
+  }
+  &.eni-modale-error .eni-modale-container{
+    border: 2px solid $eniRougeNormal;
+  }
+  &.eni-close {
+    display: none;
+  }
+  .eni-modale-container {
+    width: 80%;
+    margin: 10% auto;
+    padding: 32px;
+    border-radius: 4px;
+    box-shadow: 0px 5px 20px $eniGrisShadowModal;
+    background-color: $eniGrisBackgroundModal;
+    position: relative;
+  }
+  h1 {
+    @extend %HeadingNormal;
+    margin-bottom: 16px;
+    font-weight: initial;
+  }
+  #Access-Close-Button{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    outline: 0;
+  }
+  .eni-modale-button {
+    outline: none;
+    border: unset;
+    cursor: pointer;
+    appearance: none;
+    background-color: unset;
+
+    .eni-close {
+      display: block;
+      position: absolute;
+      top: -24px;
+      right: -24px;
+      width: 48px;
+      height: 48px;
+    }
+    &:focus,&:focus-visible{
+      .eni-close{
+        border: 2px solid $eniJauneNormal;
+      }
+    
+    }
+  }
+
+  .eni-close:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,22 @@
+%cover {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  %center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  %TEST{
+    background-color: black;
+    span{
+      height: 40px;
+      width: 100%;
+      background-color: red;
+    }
+  }

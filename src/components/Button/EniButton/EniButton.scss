@@ -1,0 +1,152 @@
+
+
+.eni-button {
+	height: 50px;
+    border-radius: 4px;
+    border: none;
+    padding: 6px 16px;
+    @extend %TextBoldXlarge;
+    cursor: pointer;
+    margin: 16px;
+}
+
+.eni-button-icon {
+    width:12px;
+    height: 12px;
+    margin-left: 12px;
+    vertical-align: middle;
+}
+
+.primary {
+    background-color: $eniJauneNormal;
+    color: $eniNoir;
+}
+
+.primary:active {
+    background-color: $eniJauneLightest;
+}
+
+.primary:disabled {
+    background-color: $eniGrisClairLighter;
+    color: $eniGrisDark;
+}
+
+.primary:disabled:hover {
+    background-color: $eniGrisClairLighter;
+}
+
+.primary:hover {
+    background-color: $eniJauneLighter;
+}
+
+.primary:focus {
+    border: solid 1.5px $eniBleuNormal;
+    background-color: $eniJauneNormal;
+    outline: none;
+}
+
+.secondary {
+    background-color: $eniBleuClairDark;
+    color: $eniNoir;
+}
+
+.secondary:active {
+    background-color: $eniBleuClairLight;
+}
+
+.secondary:disabled {
+    background-color: $eniGrisClairLighter;
+    color: $eniGrisDark;
+}
+
+.secondary:disabled:hover {
+    background-color: $eniGrisClairLighter;
+}
+
+.secondary:hover {
+    background-color: $eniBleuClairNormal;
+}
+
+.secondary:focus {
+    border: solid 1.5px $eniBleuNormal;
+    background-color: $eniBleuClairDark;
+    outline: none;
+}
+
+.tertiary {
+    background-color: $eniBlanc;
+    color: $eniNoir;
+    border: solid 1.5px $eniNoir;
+
+}
+
+.tertiary:active {
+    background-color: $eniGrisNormal;
+    color: $eniBlanc;
+}
+
+.tertiary:disabled {
+    background-color: $eniGrisClairLighter;
+    color: $eniGrisDark!important;
+    border: solid 1.5px $eniGrisNormal;
+}
+
+
+
+.tertiary:not(.tertiary:disabled):hover {
+    background-color: $eniNoir;
+    color: $eniBlanc;
+    .eni-button-icon{
+        path{
+            fill: white;
+        }
+    }
+}
+.tertiary:disabled:hover {
+    background-color: $eniGrisClairLighter;
+    color: $eniGrisDark;
+    border: solid 1.5px $eniGrisNormal;
+
+}
+.tertiary:focus {
+    border: solid 1.5px $eniJauneLighter;
+    background-color: $eniBlanc;
+    color: $eniNoir;
+    outline: none;
+}
+
+.plain {
+    background-color: $eniBlanc;
+    color: $eniNoir;
+    border: none;
+}
+
+.plain:active {
+    background-color: $eniGrisClairLighter;
+    color: $eniNoir;
+}
+
+.plain:disabled {
+    background-color:$eniGrisClairLighter;
+    color: $eniGrisDark;
+    border: none;
+}
+
+.plain:disabled:hover {
+    background-color: $eniGrisClairLighter;
+    color: $eniGrisDark;
+    border: none;
+}
+
+.plain:hover {
+    background-color: $eniGrisClairLight;
+    color: $eniNoir;
+}
+
+.plain:focus {
+    border: solid 1.5px $eniBleuNormal;
+    background-color: $eniBlanc;
+    color: $eniNoir;
+    outline: none;
+}
+

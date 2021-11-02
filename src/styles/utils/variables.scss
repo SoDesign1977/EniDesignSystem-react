@@ -1,0 +1,128 @@
+
+/* -----------------------------------------------------|
+|                   
+|   BREAKPOINTS
+|   MARGE
+|   FONTS
+|   COLOR
+|                           
+|------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------|
+|                       BREAKPOINTS                           
+|------------------------------------------------------*/
+$Minbreakpoints: (
+  "Mobile": 375px,
+  "Tablette": 640px,
+  "Desktop": 768px,
+  "DesktopLarge":1080px,
+  "DesktopXLarge":1438px,
+) !default;
+
+$Maxbreakpoints: (
+  "Mobile": 640px,
+  "Tablette":768px,
+  "Desktop": 1080px,
+  "DesktopLarge":1438px,
+  "DesktopXLarge":1920px,
+) !default;
+
+$GridColonnes: (
+  "Mobile": 4,
+  "Tablette":8,
+  "Desktop": 12,
+  "DesktopLarge":12,
+  "DesktopXLarge":12,
+) !default;
+
+/* -----------------------------------------------------|
+|                       MARGE                           
+|------------------------------------------------------*/
+
+$MargeXSmall:16px;
+$MargeSmall:16px;
+$MargeMedium:24px;
+$MargeLarge:24px;
+$MargeXLarge:24px;
+
+$Marge: (
+  "Mobile": $MargeXSmall,
+  "Tablette":$MargeSmall,
+  "Desktop": $MargeMedium,
+  "DesktopLarge":$MargeLarge,
+  "DesktopXLarge":$MargeXLarge,
+) !default;
+/* -----------------------------------------------------|
+|                       FONTS                           
+|------------------------------------------------------*/
+$EniExpBol: "EniExpBol";
+$OpenSansRegular: "OpenSansRegular";
+$OpenSansSemiBold: "OpenSansSemiBold";
+$OpenSansItalic: "OpenSansItalic";
+/* -----------------------------------------------------|
+|                       COLOR                           
+|------------------------------------------------------*/
+/* NOIR ET BLANC */
+$eniNoir: #000000;
+$eniBlanc: #ffffff;
+
+/* GRIS */
+$eniGrisNormal: #666666;
+$eniGrisLight: #999999;
+$eniGrisLighter: #b2b2b2;
+$eniGrisLightest: #cccccc;
+$eniGrisClair: #dfe0e0;
+$eniGrisClairDark: #d6d7d6;
+$eniGrisClairLight: #e9e9ea;
+$eniGrisClairLighter: #f0f0f0;
+$eniGrisClairLightest: #f3f3f3;
+$eniGrisDark: #4c4c4c;
+$eniGrisDarker: #333333;
+$eniGrisDarkest: #191919;
+$eniGrisBackgroundModal: #fafafa;
+$eniGrisFilterModal: #00000080;
+$eniGrisShadowModal: #0000004d;
+
+/* BLEU */
+$eniBleuNormal: #006699;
+$eniBleuNormalWithOpacity: #00669914;
+$eniBleuClairDark: #aec4da;
+$eniBleuClairDarker: #8babca;
+$eniBleuClairDarkest: #6891ba;
+$eniBleuClairNormal: #d3dfeb;
+$eniBleuClairLight: #f4f7fa;
+$eniBleuArdoiseNormal: #0088cc;
+$eniBleuArdoiseDark: #3f5b7d;
+$eniBleuArdoiseDarker: #2e435b;
+
+/* JAUNE */
+$eniJauneNormal: #ffd300;
+$eniJauneLight: #ffdc33;
+$eniJauneLighter: #ffe566;
+$eniJauneLightest: #ffed99;
+
+/* VERT */
+$eniVertDark: #3c781c;
+$eniVertDarkWithOpacity: #3c781c14;
+$eniVertForet: #016742;
+$eniVertForetWithOpacity: #01674214;
+
+/* ROUGE */
+$eniRougeNormal: #d0003e;
+$eniRougeNormalWithOpacity: #d0003e14;
+
+/* ORANGE */
+$eniOrange: #ed8817;
+$eniOrangeWithOpacity: #ed881714;
+/* -----------------------------------------------------|
+|                      TITLES                           
+|------------------------------------------------------*/

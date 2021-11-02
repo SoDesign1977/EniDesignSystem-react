@@ -1,0 +1,91 @@
+.eni-group-radio-button {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.eni-group-radio-button-label {
+  display: block;
+  color: $eniGrisDarkest;
+  @extend %TextSemiBoldNormal;
+  margin-bottom: 8px;
+}
+
+.eni-radio-input ~ .eni-group-radio-button-label:after {
+  content: " *";
+  color: $eniRougeNormal;
+  @extend %TextSemiBoldNormal;
+}
+
+.eni-group-radio-button-label.disabled {
+  color: $eniGrisLighter;
+}
+
+.eni-group-radio-button-label.disabled:after {
+  color: $eniGrisLighter;
+}
+.eni-radio-input {
+  width: 0;
+  height: 0;
+  appearance: none;
+  position: absolute;
+  border: unset;
+  outline: none;
+}
+
+.eni-radio-button {
+  background-color: unset;
+  appearance: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  padding: 0.125em;
+  padding-left: 1.5em;
+  padding-right: 0.5em;
+  @extend %TextNormal;
+  outline: none;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translate(-20%, -50%);
+    content: "";
+  }
+  &::before {
+    width: 18px;
+    height: 18px;
+    border: 1px solid $eniGrisDarker;
+    border-radius: 100%;
+
+  }
+  &[aria-checked="true"]::after {
+    display: block;
+    background-color: $eniNoir;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    transform: translate(20%, -50%);
+  }
+
+  &[aria-checked="true"]::before {
+    border: 2px solid $eniJauneLight;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border: 2px solid $eniJauneLight;
+  }
+ 
+  &.disabled{
+    color: $eniGrisLighter;
+    cursor: unset;
+    &:before{
+      border: 1px solid $eniGrisLighter;
+    }
+
+  }
+}

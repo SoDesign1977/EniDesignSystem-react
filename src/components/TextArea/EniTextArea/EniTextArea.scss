@@ -1,0 +1,85 @@
+
+.eni-textarea {
+  display: block;
+  padding: 12px;
+  margin-top: 4px;
+  border-radius: 4px;
+  width: 300px;
+  border: solid 1px $eniGrisDarker;
+  @extend %TextSemiBoldNormal;
+}
+
+::placeholder {
+  @extend %TextNormal;
+}
+
+.eni-textarea:disabled {
+  background-color: $eniGrisClairLightest;
+  color: $eniGrisDark;
+  border: solid 1px $eniGrisNormal;
+}
+
+.eni-textarea:disabled:hover {
+  border: solid 1px $eniGrisNormal;
+}
+
+.eni-textarea:focus {
+  border-color: $eniJauneNormal;
+  outline: none;
+}
+
+.eni-textarea:hover {
+  border-color: $eniJauneNormal;
+}
+
+.eni-textarea-label {
+  color: $eniGrisDarkest;
+  @extend %TextSemiBoldNormal;
+}
+
+.eni-textarea-label.required:after {
+  content: " *";
+  color: $eniRougeNormal;
+  @extend %TextSemiBoldNormal;
+}
+
+.eni-textarea-label.disabled {
+  color: $eniGrisLighter;
+}
+
+.eni-textarea-label.disabled:after {
+  color: $eniGrisLighter;
+}
+
+.eni-textarea-header {
+  display: block;
+  width: 325px;
+}
+.eni-textarea:focus:invalid {
+  color: $eniRougeNormal;
+  border-color: $eniRougeNormal;
+}
+.eni-textarea:invalid[value]:not([value=""]) {
+  color: $eniRougeNormal;
+  border-color: $eniRougeNormal;
+}
+
+.error-message {
+  display: none;
+}
+
+.eni-textarea:focus:invalid ~ .error-message {
+  display: block;
+  color: $eniRougeNormal;
+  @extend %TextNormal;
+}
+.eni-textarea:invalid[value]:not([value=""]) ~ .error-message {
+  display: block;
+  color: $eniRougeNormal;
+  @extend %TextNormal;
+}
+#eni-textarea-caract {
+  color: $eniGrisNormal;
+  float: right;
+  @extend %TextItalicNormal;
+}

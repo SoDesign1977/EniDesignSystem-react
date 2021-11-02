@@ -1,0 +1,104 @@
+
+.eni-group-switch {
+	display: flex;
+
+  .eni-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    margin-right: 8px;
+    pointer-events: none;
+    
+    input {
+      opacity: 0;
+      pointer-events: all;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .eni-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $eniGrisLighter;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    .eni-switch.disabled .eni-slider {
+      background-color: $eniGrisLightest;
+    }
+
+    .eni-slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 2px;
+      bottom: 2px;
+      background-color: $eniBlanc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+    input:focus ~ .eni-slider:before{
+      border: 3px solid $eniJauneLightest;
+      
+    }
+    .eni-switch.disabled .eni-slider:before {
+      background-color: $eniGrisClair;
+    }
+
+    .eni-slider.round {
+      border-radius: 34px;
+    }
+
+    .eni-slider.round:before {
+      border-radius: 50%;
+    }
+
+    input:checked + .eni-slider {
+      background-color: $eniJauneNormal;
+    }
+
+    input:focus + .eni-slider {
+      box-shadow: 0 0 1px $eniJauneNormal;
+    }
+
+    input:checked + .eni-slider:before {
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+  }
+  
+  .eni-switch-label {
+    display: block;
+    color: $eniGrisDarkest;
+    @extend %TextSemiBoldNormal;
+  }
+
+  .eni-switch-label.required:after {
+    content: " *";
+    color: $eniRougeNormal;
+    @extend %TextSemiBoldNormal;
+  }
+
+  .eni-switch-label.disabled {
+    color: $eniGrisLighter;
+  }
+
+  .eni-switch-label.disabled:after {
+    color: $eniGrisLighter;
+  }
+
+  .eni-switch-value {
+    color: $eniGrisDarkest;
+    @extend %TextNormal;
+    vertical-align: top;
+  }
+}

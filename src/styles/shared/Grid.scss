@@ -1,0 +1,53 @@
+
+/* -----------------------------------------------------|
+|                        GRID                 
+|------------------------------------------------------*/
+
+%Grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 1fr));
+    grid-template-rows: masonry;
+  
+    @include media("Mobile") {
+      padding: 0px map-get($Marge,"Mobile");
+      min-width: calc(map-get($Minbreakpoints,"Mobile") - (map-get($Marge,"Mobile") * 2));
+      max-width: map-get($Maxbreakpoints,"Mobile");
+      grid-gap: map-get($Marge,"Mobile");
+    }
+  
+    @include media("Tablette") {
+      padding: 0px map-get($Marge,"Tablette");
+      min-width: calc(map-get($Minbreakpoints,"Tablette") - (map-get($Marge,"Tablette") * 2));
+      max-width: map-get($Maxbreakpoints,"Tablette");
+      grid-gap: map-get($Marge,"Tablette");
+    }
+  
+    @include media("Desktop") {
+      padding: 0px map-get($Marge,"Desktop");
+      min-width: calc(map-get($Minbreakpoints,"Desktop") - (map-get($Marge,"Desktop") * 2));
+      max-width: map-get($Maxbreakpoints,"Desktop");
+      grid-gap: map-get($Marge,"Desktop");
+    }
+  
+    @include media("DesktopLarge") {
+      padding: 0px map-get($Marge,"DesktopLarge");
+      min-width: calc(
+        map-get($Minbreakpoints,"DesktopLarge") - (map-get($Marge,"DesktopLarge") * 2)
+      );
+      max-width: map-get($Maxbreakpoints,"DesktopLarge");
+      grid-gap: map-get($Marge,"DesktopLarge");
+    }
+  
+    @include media("DesktopXLarge") {
+      padding: 0px map-get($Marge,"DesktopXLarge");
+      min-width: calc(
+        map-get($Minbreakpoints,"DesktopXLarge") - (map-get($Marge,"DesktopXLarge") * 2)
+      );
+      max-width: map-get($Maxbreakpoints,"DesktopXLarge");
+      grid-gap: map-get($Marge,"DesktopXLarge");
+    }
+  }
+  .Grid{
+    @extend %Grid;
+    @extend %TEST;
+  }
