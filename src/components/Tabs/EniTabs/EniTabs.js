@@ -1,7 +1,7 @@
 import React from "react";
 import { generateKey } from "../../../js/helpers";
 import PropTypes from 'prop-types';
-import "./EniTabs.scss"
+
 export default function EniTabs({
   tabs = [
     { icon: "", title: "", components: <div></div>, disabled: false },

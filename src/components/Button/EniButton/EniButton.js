@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import "./EniButton.scss"
+
 import  ArrowSVG  from "../../../styles/assets/images/arrow.svg";
 import  ArrowDisabledSVG  from "../../../styles/assets/images/arrowDisable.svg";
 export default function EniButton({ title, disabled = false,arrow=false,state,...props }) {

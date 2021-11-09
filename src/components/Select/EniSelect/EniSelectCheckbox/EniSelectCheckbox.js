@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import SelectSVG from "../../../../styles/assets/images/select-checked.svg";
 import SelectArrowSVG from "../../../../styles/assets/images/select-arrow-down.svg";
 import { generateKey } from "../../../../js/helpers";
-import "../EniSelectWithUl.scss"
+
 export default function EniSelectCheckbox({
   required = false,
   title = "test",

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import "./EniCheckbox.scss"
+
 import SelectSVG  from "../../../styles/assets/images/select-checked.svg";
 export default function EniCheckbox({
   title = "",

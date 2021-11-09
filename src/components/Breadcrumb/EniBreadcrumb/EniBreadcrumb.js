@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import "./EniBreadcrumb.scss"
+s
 
 export default function EniBreadcrumb({message,arianne =[{}]}) {
   return (

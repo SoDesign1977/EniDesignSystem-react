@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import "../EniSquare.scss"
+
 import { generateKey } from "../../../../js/helpers";
 import ErrorSVG from "../../../../styles/assets/images/refused.svg";
 export default function EniSquareListRadio({

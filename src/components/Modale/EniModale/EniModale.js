@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./EniModale.scss"
+
 import { generateKey } from "../../../js/helpers";
 import CloseSVG  from "../../../styles/assets/images/close.svg";
 import ModalErrorSVG  from "../../../styles/assets/images/modal-error.svg";

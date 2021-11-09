@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./EniAlert.scss"
+
 import  ErrorSVG  from "../../../styles/assets/images/error.svg";
 import  ArrowRedSVG  from "../../../styles/assets/images/arrowRed.svg";
 

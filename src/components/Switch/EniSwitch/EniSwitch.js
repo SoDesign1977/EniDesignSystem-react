@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 import { generateKey } from "../../../js/helpers";
-import "./EniSwitch.scss"
+
 export default function EniSwitch({
   title,
   disabled = false,

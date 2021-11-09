@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import "./EniTooltip.scss";
+
 export default function EniTooltipBottom({ ariaId, title, children,state }) {
   return (
     <>

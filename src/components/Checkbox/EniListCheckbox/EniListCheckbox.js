@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import "./EniListCheckbox.scss"
+
 import { generateKey } from "../../../js/helpers";
 import  SelectSVG  from "../../../styles/assets/images/select-checked.svg";
 

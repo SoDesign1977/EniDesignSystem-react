@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { generateKey } from "../../../js/helpers";
-import "./EniTextArea.scss"
+
 export default function EniTextArea({
   title,
   placeholder = "Placeholder",

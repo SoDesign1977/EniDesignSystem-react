@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import "./EniStatus.scss"
+
 
 export default function EniStatus({ message,state }) {
   return (

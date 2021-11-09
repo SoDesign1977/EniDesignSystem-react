@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import "./EniInput.scss"
+
 import { generateKey } from "../../../js/helpers";
 export default function EniInput({
   title,
