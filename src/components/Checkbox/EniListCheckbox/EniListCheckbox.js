@@ -13,27 +13,17 @@ export default function EniListCheckbox({
       disabled: false,
       checked: false,
       props: null,
-      required: false,
     },
   ],
+ required=false,
   ...props
 }) {
 
   const [value, setvalue] = React.useState([]); // value de l'élément selectionné pour l'input
-  const [required, setRequired] = React.useState(false);
-  React.useEffect(() => {
-    checkrequired();
-  }, []);
 
-  const checkrequired = () => {
-    let x = false;
-    checkbox.forEach((el) => {
-      if (el.required) {
-        x = true;
-      }
-    });
-    setRequired(x);
-  };
+
+
+ 
   const handleChange = (data) => {
     if (value.includes(data)) {
       setvalue(
@@ -50,14 +40,14 @@ export default function EniListCheckbox({
       <fieldset className="eni-group-checkbox" tabindex="0" aria-controls="condX">
       <input
       {...props}
-      name={name}
+          name={name}
           className="eni-checkbox-input"
           type="text"
           value={value}
           required={required}
           minLength="1"
         ></input>
-        <legend className={`eni-group-checkbox-label`}>{legend}</legend>
+        <legend className="eni-group-checkbox-label">{legend}</legend>
         {checkbox.map((element, index) => {
           let x = generateKey("checkbox");
           return (
@@ -96,5 +86,6 @@ EniListCheckbox.propTypes = {
     checked: PropTypes.bool,
     props: null,
     required: PropTypes.bool,
+
     })),
 };

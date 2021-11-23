@@ -3,7 +3,7 @@ import React from "react";
 import EniSelectCheckbox from "./EniSelectCheckbox";
 
 export default {
-  component: EniCheckboxWithUI,
+  component: EniSelectCheckbox,
   title:  "Components/Select/EniSelectCheckbox",
 };
 
@@ -12,8 +12,8 @@ const Template = (args) => <EniSelectCheckbox {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   required: true,
-  title: "Option de vos offres",
-
+  title: "test",
+  placeholder: "PlaceHolder",
   items: [
     { value: "Bonjour" },
     { value: "Salut" },
@@ -25,13 +25,15 @@ Default.args = {
     { value: "Asus" },
   ],
   disabled: false,
+  name:"testx",
   errorMessage: "Champs Obligatoire",
 };
 
 export const Categories = Template.bind({});
 Categories.args = {
   required: false,
-  title: "Option by Categorie",
+  title: "test",
+  placeholder: "PlaceHolder",
   items: [
     { value: "Bonjour", categorie: "Salutation" },
     { value: "Salut", categorie: "Salutation" },
@@ -43,6 +45,7 @@ Categories.args = {
     { value: "Asus", categorie: "Ordinnateurs" },
   ],
   disabled: false,
+  name:"testx",
   errorMessage: "Champs Obligatoire",
 };
 
@@ -62,5 +65,6 @@ Disabled.args = {
     { value: "Asus", categorie: "Ordinnateurs" },
   ],
   disabled: true,
+  name:"testx",
   errorMessage: "Champs Obligatoire",
 };

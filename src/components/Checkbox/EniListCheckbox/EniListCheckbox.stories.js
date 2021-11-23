@@ -26,7 +26,6 @@ checkbox:[
   {
     title: "Test4",
     checked: true,
-    required:true
   },
   {
     title: "Test5",

@@ -11,15 +11,21 @@ const Template = (args) => <EniSquareListRadio {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  square :[
+  ListSquare :[
     {
       title: "non",
-      icon: ErrorSVG,
+      icon: require("../../../../styles/assets/images/refused.svg"),
       disabled: true,
     },
     {
       title: "oui",
-      icon: ErrorSVG,
+      icon: require("../../../../styles/assets/images/success.svg"),
+      disabled: false,
+    
+    },
+    {
+      title: "yol",
+      icon: require("../../../../styles/assets/images/success.svg"),
       disabled: false,
     
     },

@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 export default function EniTooltipBottom({ ariaId, title, children,state }) {
   return (
     <>
-      <div class="eni-tooltip"  >
+      <div className="eni-tooltip"  >
         {children}
-        <span class={`eni-tooltiptext ${state}`} role="tooltip" id={ariaId} >{title}</span>
+        <span className={`eni-tooltiptext ${state}`} role="tooltip" id={ariaId} >{title}</span>
       </div>
     </>
   );

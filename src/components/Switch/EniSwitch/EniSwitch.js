@@ -14,6 +14,10 @@ export default function EniSwitch({
   const [id, setid] = React.useState(generateKey("EniSwitch"));
   const [value, setvalue] = React.useState(checked);
 
+  React.useEffect(()=>{
+    if(value!=checked)
+    setvalue(checked)
+  },[checked])
   return (
     <>
       <div className="eni-group-switch"  role="radiogroup">

@@ -84,7 +84,7 @@ export default function EniSelect({
 
     return (
       <ul
-        tabindex="-1"
+        tabIndex="-1"
         role="listbox"
         aria-labelledby="exp_elem"
         className={`eni-select-options ${

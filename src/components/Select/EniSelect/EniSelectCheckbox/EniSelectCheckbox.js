@@ -99,7 +99,7 @@ export default function EniSelectCheckbox({
 
     return (
       <ul
-        tabindex="-1"
+        tabIndex="-1"
         role="listbox"
         aria-labelledby="exp_elem"
         className={`eni-select-options ${
@@ -116,7 +116,7 @@ export default function EniSelectCheckbox({
       <div
         className={`${open ? "eni-select-window-open" : ""}`}
         onClick={() => {
-          OpenSelect(false);
+          OpenSelect(false)
         }}
       ></div>
       <div className="EniSelectWithUl">
@@ -143,13 +143,13 @@ export default function EniSelectCheckbox({
             aria-haspopup="listbox"
             className={`eni-select-box  ${open ? "eni-select-box-open" : ""}`}
             onClick={() => {
-              OpenSelect(!open);
+              OpenSelect(!open)
             }}
           >
             <span>
               {value.length > 0
                 ? value.map((el) => {
-                    return `${el} `;
+                    return `${el} `
                   })
                 : placeholder}
             </span>

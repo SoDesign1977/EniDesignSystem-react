@@ -25,7 +25,13 @@
       color: $eniRougeNormal;
       @extend %TextNormal;
     }
-
+    & ~ .eni-input-label {
+      display: block;
+      color: $eniGrisDarkest;
+      font-family: $OpenSansSemiBold;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
     &:required {
       & ~ .eni-input-label:after {
         content: " *";
@@ -161,8 +167,7 @@
           }
           &.selected .checkbox svg {
             right: unset;
-            width: 90%;
-            height: 90%;
+
 
             path {
               fill: $eniGrisDarker;

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { generateKey } from "../../../js/helpers";
-import CloseSVG  from "../../../styles/assets/images/close.svg";
+
 import ModalErrorSVG  from "../../../styles/assets/images/modal-error.svg";
 import ModalInfoSVG  from "../../../styles/assets/images/modal-info.svg";
 import ModalSuccessSVG  from "../../../styles/assets/images/modal-success.svg";
@@ -62,8 +62,8 @@ export default function EniModale({
                 aria-labelledby="Access-Close-Button"
                 className="eni-modale-button"
               >
-                <CloseSVG className="eni-close"></CloseSVG>
-              </button>{" "}
+                <img src={require("../../../styles/assets/images/close.svg")}></img>
+              </button>
             </>
           ) : (
             ""

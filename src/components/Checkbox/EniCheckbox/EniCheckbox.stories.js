@@ -9,8 +9,25 @@ export default {
 
 const Template = (args) => <EniCheckbox {...args} />;
 
+
 export const Default = Template.bind({});
 Default.args = {
-title:"Checkbox",
+  title: "Label",
+};
+export const Checked = Template.bind({});
+Checked.args = {
+  title: "Label",
+  checked:true
+};
+export const Disabled = Template.bind({});
+Disabled.args = {
+  title: "Label",
+  disabled:true
+};
 
+export const DisabledSelected = Template.bind({});
+DisabledSelected.args = {
+  title: "Label",
+  disabled:true,
+  checked:true
 };

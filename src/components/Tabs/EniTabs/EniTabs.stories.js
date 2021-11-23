@@ -1,7 +1,6 @@
 import React from 'react';
 
 import EniTabs from './EniTabs';
-import ReactLogo from '../../../styles/assets/images/gaz_elec.svg';
 
 export default {
   component: EniTabs,
@@ -13,36 +12,36 @@ const Template = args => <EniTabs {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   tabs:[{
-    icon: ReactLogo,
+    icon: require("../../../styles/assets/images/gaz_elec.svg"),
     title:"Electricité",
     components:(<p>Fusce molestie tellus in sapien pulvinar, faucibus volutpat leo viverra. Sed vulputate</p>),
     disabled:true
   },
   {
-    icon: ReactLogo,
+    icon: require("../../../styles/assets/images/gaz_elec.svg"),
     title:"Electricité",
     components:(<p>Fusce molestie tellus in sapien pulvinar, faucibus volutpat leo viverra. Sed vulputate</p>),
     disabled:true
   },
   {
-    icon: ReactLogo,
+    icon: require("../../../styles/assets/images/gaz_elec.svg"),
     title:"Electricité",
     components:(<p>Fusce molestie tellus in sapien pulvinar, faucibus volutpat leo viverra. Sed vulputate</p>)
   },
   {
-    icon: ReactLogo,
+    icon: require("../../../styles/assets/images/gaz_elec.svg"),
     title:"Electricité",
     components:(<p>Fusce molestie tellus in sapien pulvinar, faucibus volutpat leo viverra. Sed vulputate</p>),
     disabled:true
   },
   {
-    icon: ReactLogo,
+    icon: require("../../../styles/assets/images/gaz_elec.svg"),
     title:"Electricité",
     components:(<p>Fusce molestie tellus in sapien pulvinar, faucibus volutpat leo viverra. Sed vulputate</p>),
     disabled:true
   },
   {
-    icon: ReactLogo,
+    icon: require("../../../styles/assets/images/gaz_elec.svg"),
     title:"Electricité",
     components:(<h1>Hello</h1>)
   },

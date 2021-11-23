@@ -5,7 +5,7 @@ import { generateKey } from "../../../js/helpers";
 
 export default function EniRadioButton({
   title,
-  radio = [{ value: "", disabled: false, checked: false }],
+  radios = [{ value: "", disabled: false, checked: false }],
   required = false,
   name="",
   ...props
@@ -19,7 +19,7 @@ export default function EniRadioButton({
 
   const radioChecker = () => {
     let x = "";
-    radio.forEach((element) => {
+    radios.forEach((element) => {
       if (element.checked === true && value === "") {
         x = element.value;
       }
@@ -46,7 +46,7 @@ export default function EniRadioButton({
       <legend id={id} className={`eni-group-radio-button-label `}>
         {title}
       </legend>
-      {radio.map((element) => {
+      {radios.map((element) => {
         let x = generateKey("radio");
         return (
           <button
@@ -73,7 +73,7 @@ export default function EniRadioButton({
 EniRadioButton.propTypes = {
   title:PropTypes.string,
   name:PropTypes.string,
-  radio:PropTypes.arrayOf( PropTypes.shape({
+  radios:PropTypes.arrayOf( PropTypes.shape({
     value: PropTypes.string,
     disabled: PropTypes.bool,
     checked: PropTypes.bool,

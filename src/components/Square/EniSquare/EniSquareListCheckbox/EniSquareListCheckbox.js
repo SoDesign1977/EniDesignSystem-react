@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { generateKey } from "../../../../js/helpers";
 import ErrorSVG from "../../../../styles/assets/images/refused.svg";
 export default function EniSquareListCheckbox({
-  square = [
+  ListSquare = [
     {
       title: "non",
       icon: ErrorSVG,
@@ -55,7 +55,7 @@ export default function EniSquareListCheckbox({
         minLength="1"
       ></input>
       <legend id={id} className={`eni-square-label`}>{legend}</legend>
-      {square.map((element, index) => {
+      {ListSquare.map((element, index) => {
         let x = generateKey("EniSquare");
         return (
           <div
@@ -92,7 +92,7 @@ EniSquareListCheckbox.propTypes = {
   legend:PropTypes.string,
   name:PropTypes.string,
   required: PropTypes.bool,
-  square:PropTypes.arrayOf( PropTypes.shape({
+  ListSquare:PropTypes.arrayOf( PropTypes.shape({
     title: PropTypes.string,
     icon: PropTypes.string,
     disabled: PropTypes.bool,

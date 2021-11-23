@@ -58,16 +58,16 @@
     appearance: none;
     background-color: unset;
 
-    .eni-close {
+    img {
       display: block;
       position: absolute;
       top: -24px;
       right: -24px;
-      width: 48px;
+      width:  48px;
       height: 48px;
     }
     &:focus,&:focus-visible{
-      .eni-close{
+      img{
         border: 2px solid $eniJauneNormal;
       }
     
