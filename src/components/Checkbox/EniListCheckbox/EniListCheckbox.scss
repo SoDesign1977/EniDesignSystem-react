@@ -34,9 +34,6 @@
       color: $eniGrisLighter;
     }
     li {
-      &:focus {
-        border: 1px solid $eniBleuNormal;
-      }
       cursor: pointer;
       display: flex;
       justify-content: flex-start;
@@ -44,6 +41,10 @@
       min-height: 18px;
       margin: 4px;
       overflow-wrap: anywhere;
+      margin-bottom: 32px;
+      &:focus {
+        border: 1px solid $eniBleuNormal;
+      }
       span {
         margin-left: 8px;
         @extend %TextNormal;
@@ -63,6 +64,7 @@
         background-color: unset;
       }
       & .checkbox {
+       
         cursor: pointer;
         appearance: none;
         background-color: unset;
@@ -71,8 +73,8 @@
         justify-content: center;
         align-items: center;
         margin-left: 8px;
-        width: 18px;
-        height: 18px;
+        width: 24px;
+        height: 24px;
         border: 1px solid $eniJauneNormal;
       }
       &:not(.selected) .checkbox svg {
@@ -80,18 +82,18 @@
       }
       &.selected .checkbox svg {
         right: unset;
-        width: 90%;
-        height: 90%;
   
         path {
           fill: $eniGrisDarker;
         }
       }
-  
+      &.selected .checkbox {
+        border: 2px solid $eniJauneNormal;
+      }
       &.disabled .checkbox {
         cursor: unset;
         border: solid 1px $eniGrisLight;
-        background-color: $eniGrisLightest;
+        background-color: $eniGrisClairLightest;
       }
     }
   

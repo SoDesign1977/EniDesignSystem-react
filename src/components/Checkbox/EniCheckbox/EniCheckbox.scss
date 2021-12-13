@@ -21,6 +21,7 @@
     right: 8px;
   }
   &.disabled {
+  
     color: $eniGrisLighter;
     cursor: unset;
   }
@@ -36,17 +37,16 @@
     justify-content: center;
     align-items: center;
     margin-left: 8px;
-    width: 18px;
-    height: 18px;
-    border: 1px solid $eniJauneNormal;
+    width: 24px;
+    height: 24px;
+    border: 2px solid $eniJauneNormal;
   }
   &:not(.selected) .checkbox svg {
     visibility: hidden;
   }
   &.selected .checkbox svg {
     right: unset;
-    width: 90%;
-    height: 90%;
+
 
     path {
       fill: $eniGrisDarker;
@@ -56,9 +56,11 @@
   &.disabled .checkbox {
     cursor: unset;
     border: solid 1px $eniGrisLight;
-    background-color: $eniGrisLightest;
+    background-color: $eniGrisClairLightest;
   }
-
+  &.selected .checkbox {
+    border: 2px solid $eniJauneNormal;
+  }
   & ~ input{
     width: 0;
     height: 0;

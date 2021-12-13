@@ -6,7 +6,6 @@ export default function EniCheckbox({
   title = "",
   disabled = false,
   checked = false,
-  required = false,
   name="",
   ...props
 }) {
@@ -16,7 +15,7 @@ export default function EniCheckbox({
   return (
     <>
       <div
-        {...props}
+
         role="checkbox"
         aria-checked={value}
         onClick={() => {
@@ -38,8 +37,7 @@ export default function EniCheckbox({
         checked={value}
         value={title}
         disabled={disabled}
-        required={required}
-        minLength="1"
+        {...props}
       ></input>
     </>
   );
@@ -47,7 +45,6 @@ export default function EniCheckbox({
 EniCheckbox.propTypes = {
   title: PropTypes.string,
   checked: PropTypes.bool,
-  required: PropTypes.bool,
   disabled: PropTypes.bool,
   name: PropTypes.string,
 };

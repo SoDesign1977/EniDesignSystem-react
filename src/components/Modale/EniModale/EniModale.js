@@ -41,7 +41,7 @@ export default function EniModale({
         ref={dialog}
       >
         <div className="eni-modale-container">
-          <h1 id={id}>{title}</h1>
+      
           {state === "error" ? (
             <ModalErrorSVG></ModalErrorSVG>
           ) : state === "success" ? (
@@ -51,6 +51,7 @@ export default function EniModale({
           ) : (
             ""
           )}
+              <h1 id={id}>{title}</h1>
           <div className="eni-modale-content">{children}</div>
           {closeButton ? (
             <>

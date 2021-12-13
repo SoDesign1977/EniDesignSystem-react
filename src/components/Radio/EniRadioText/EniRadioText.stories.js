@@ -1,20 +1,20 @@
 import React from "react";
 
-import EniRadioButton from "./EniRadioButton";
+import EniRadioText from "./EniRadioText";
 
 export default {
-  component: EniRadioButton,
-  title: "Components/Radio/EniRadioButton",
+  component: EniRadioText,
+  title: "Components/Radio/EniRadioText",
 };
 
-const Template = (args) => <EniRadioButton {...args} />;
+const Template = (args) => <EniRadioText {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  title: "RadioButtonx",
+  title: "RadioButtonxx",
   radios: [
     {
-      value: "Placeholder",
+      value: "Test1",
     },
     {
       value: "Test2",
@@ -22,10 +22,11 @@ Default.args = {
     {
       value: "Test3",
       disabled: true,
+       checked: true,
     },
     {
       value: "Test4",
-      checked: true,
+     
     },
     {
       value: "Test5",

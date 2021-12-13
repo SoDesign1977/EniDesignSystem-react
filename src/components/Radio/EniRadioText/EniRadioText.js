@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { generateKey } from "../../../js/helpers";
 
-export default function EniRadioButton({
+export default function EniRadioText({
   title,
   radios = [{ value: "", disabled: false, checked: false }],
   required = false,
@@ -30,20 +30,20 @@ export default function EniRadioButton({
 
   return (
     <fieldset
-      className="eni-group-radio-button"
+      className="eni-group-radio-text"
       role="radiogroup"
       aria-labelledby={id}
     >
       <input
       {...props}
         name={name}
-        type="button"
+        type="text"
         className={`eni-radio-input`}
         required={required}
         minLength="2"
         value={value}
       ></input>
-      <legend id={id} className={`eni-group-radio-button-label `}>
+      <legend id={id} className={`eni-group-radio-text-label `}>
         {title}
       </legend>
       {radios.map((element) => {
@@ -53,7 +53,7 @@ export default function EniRadioButton({
             role="radio"
             key={x}
             disabled={element.disabled}
-            className={`eni-radio-button ${
+            className={`eni-radio-text ${
               element.disabled ? "disabled" : ""
             } ${element.value === value ? "checked" : ""}`}
             aria-checked={element.value === value ? true : false}
@@ -63,7 +63,7 @@ export default function EniRadioButton({
               }
             }}
           >
-           <span> {element.value}</span>
+            <span>{element.value}</span>
           </button>
         );
       })}

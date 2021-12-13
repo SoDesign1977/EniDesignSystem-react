@@ -1,27 +1,27 @@
-.eni-group-radio-button {
+.eni-group-radio-text {
   display: flex;
   flex-direction: column;
-
+ 
 }
 
-.eni-group-radio-button-label {
+.eni-group-radio-text-label {
   display: block;
   color: $eniGrisDarkest;
   @extend %TextSemiBoldNormal;
   margin-bottom: 8px;
 }
 
-.eni-radio-input ~ .eni-group-radio-button-label:after {
+.eni-radio-input ~ .eni-group-radio-text-label:after {
   content: " *";
   color: $eniRougeNormal;
   @extend %TextSemiBoldNormal;
 }
 
-.eni-group-radio-button-label.disabled {
+.eni-group-radio-text-label.disabled {
   color: $eniGrisLighter;
 }
 
-.eni-group-radio-button-label.disabled:after {
+.eni-group-radio-text-label.disabled:after {
   color: $eniGrisLighter;
 }
 .eni-radio-input {
@@ -32,25 +32,23 @@
   border: unset;
   outline: none;
 }
-.eni-group-radio-button{
-.eni-radio-button {
-  padding: $MargeXSmall;
-  margin: $MargeLarge;
+
+.eni-radio-text {
   background-color: unset;
   appearance: none;
   cursor: pointer;
-  border: 1px solid $eniGrisLightest;
+  border: 2px solid transparent;
   border-radius: 5px;
   display: inline-block;
   position: relative;
-  padding-left: calc($MargeXSmall + $MargeXSmall);
+  padding: 0.125em;
+  padding-left: 1.5em;
+  padding-right: 0.5em;
   @extend %TextNormal;
   outline: none;
   width: fit-content;
-
   &::before,
   &::after {
-    margin-left: $MargeXSmall;
     position: absolute;
     top: 50%;
     left: 7px;
@@ -74,36 +72,26 @@
   }
 
   &[aria-checked="true"]::before {
-    border: 2px solid $eniJauneNormal;
+    border: 2px solid $eniJauneLight;
+  }
 
-  }
-  &[aria-checked="true"] span {
-    @extend %TextSemiBoldNormal;
- 
-  }
-  &[aria-checked="true"]{
-    background-color: $eniJauneLightest;
-    border-color: $eniJauneNormal;
-  }
   &:hover::before,
-  &:focus::before,&:hover {
-    border-color: $eniJauneNormal;
+  &:focus::before {
+    border: 2px solid $eniJauneLight;
   }
  
   &.disabled{
     color: $eniGrisLighter;
     cursor: unset;
-    border-color: $eniGrisNormal;
-    background-color: $eniGrisClairLightest;
     &:before{
-   
+      background-color: $eniGrisClairLighter;
       border: 1px solid $eniGrisLighter;
     }
-
+    &[aria-checked="true"]::before {
+      border: 2px solid $eniJauneLight;
+    }
   }
- 
   span{
-    padding-left: $MargeXSmall;
+    margin-left: $MargeXSmall;
   }
-}
 }
