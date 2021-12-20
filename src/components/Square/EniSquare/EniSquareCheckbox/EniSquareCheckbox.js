@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 import { generateKey } from "../../../../js/helpers";
-import ErrorSVG from "../../../../styles/assets/images/refused.svg";
+
 export default function EniSquareCheckbox({
   title = "",
-  icon = ErrorSVG,
+  icon = "",
   disabled = false,
   checked = false,
   required = false,

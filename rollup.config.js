@@ -17,11 +17,13 @@ export default[
             }
         ],
         plugins:[
-            svg(),
+      
             scss({
                 processor: () => postcss([autoprefixer()]),
-                prefix: `@import "./src/styles/index.scss";`,
-                outputStyle: 'compressed'
+                // prefix: `@import "./src/styles/index.scss";`,
+                // sass: require('node-sass'),
+                output:"./dist/index.css",
+                outputStyle: 'compressed',
               }),
             babel({
                 exclude:"node_modules/**",
@@ -29,7 +31,8 @@ export default[
             }),
             external(),
             resolve(),
-            terser()
+            terser(),
+            svg(),
         ]
     }
 ]

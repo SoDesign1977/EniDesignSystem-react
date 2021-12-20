@@ -1,8 +1,10 @@
 {
   "name": "enidesignsystem-react",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "EniDesignSystem",
   "main": "dist/index.js",
+  "files":  ["dist/index.css","dist/index.js"],
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
@@ -35,7 +37,6 @@
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-terser": "^7.0.2",
-    "sass": "^1.43.4",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0"
   },
@@ -44,5 +45,16 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  }
+  },
+  "dependencies": {
+    "sass": "^1.43.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoDesign1977/EniDesignSystem-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SoDesign1977/EniDesignSystem-react/issues"
+  },
+  "homepage": "https://github.com/SoDesign1977/EniDesignSystem-react#readme"
 }

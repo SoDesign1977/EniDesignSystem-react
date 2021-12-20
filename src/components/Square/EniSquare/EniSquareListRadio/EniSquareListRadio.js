@@ -2,17 +2,17 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 import { generateKey } from "../../../../js/helpers";
-import ErrorSVG from "../../../../styles/assets/images/refused.svg";
+
 export default function EniSquareListRadio({
   ListSquare = [
     {
       title: "non",
-      icon: ErrorSVG,
+      icon: "",
       disabled: false,
     },
     {
       title: "oui",
-      icon: ErrorSVG,
+      icon: "",
       disabled: false,
     },
   ],

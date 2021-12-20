@@ -1,4 +1,4 @@
-
+import "./styles/index.scss"
 import EniAlert from './components/Alert/EniAlert/EniAlert'
 
 import EniBreadcrumb from './components/Breadcrumb/EniBreadcrumb/EniBreadcrumb'
