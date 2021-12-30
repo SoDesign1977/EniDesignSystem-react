@@ -1,6 +1,6 @@
 {
   "name": "enidesignsystem-react",
-  "version": "1.0.3",
+  "version": "0.0.4",
   "description": "EniDesignSystem",
   "main": "dist/index.js",
   "files":  ["dist/index.css","dist/index.js"],

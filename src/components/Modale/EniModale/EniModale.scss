@@ -58,7 +58,7 @@
     appearance: none;
     background-color: unset;
 
-    img {
+    svg {
       display: block;
       position: absolute;
       top: -24px;
@@ -67,7 +67,7 @@
       height: 48px;
     }
     &:focus,&:focus-visible{
-      img{
+      svg{
         border: 2px solid $eniJauneNormal;
       }
     

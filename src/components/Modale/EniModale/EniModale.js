@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 import { generateKey } from "../../../js/helpers";
 
-
 export default function EniModale({
   title,
   children,
@@ -116,9 +115,56 @@ export default function EniModale({
                 aria-labelledby="Access-Close-Button"
                 className="eni-modale-button"
               >
-                <img
-                  src={require("../../../styles/assets/images/close.svg")}
-                ></img>
+                <svg
+                  width="68"
+                  height="68"
+                  viewBox="0 0 68 68"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_d)">
+                    <circle cx="34" cy="32" r="24" fill="white" />
+                  </g>
+                  <path
+                    d="M42.1673 25.4785L40.5223 23.8335L34.0007 30.3552L27.479 23.8335L25.834 25.4785L32.3557 32.0002L25.834 38.5218L27.479 40.1668L34.0007 33.6452L40.5223 40.1668L42.1673 38.5218L35.6457 32.0002L42.1673 25.4785Z"
+                    fill="#323232"
+                  />
+                  <defs>
+                    <filter
+                      id="filter0_d"
+                      x="0"
+                      y="0"
+                      width="68"
+                      height="68"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="RGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      />
+                      <feOffset dy="2" />
+                      <feGaussianBlur stdDeviation="5" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
               </button>
             </>
           ) : (
