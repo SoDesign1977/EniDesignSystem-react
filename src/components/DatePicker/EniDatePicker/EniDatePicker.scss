@@ -1,0 +1,462 @@
+.EniDatePicker {
+  position: relative;
+  .calendar {
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    z-index: 1;
+    box-shadow: 0 5px 20px 0 rgba($color: #000000, $alpha: 0.2);
+    & > div:first-child {
+      display: none;
+    }
+  }
+  .RangeDateLabel {
+    margin-bottom: 5px;
+    margin-top: 3px;
+  }
+
+  .eni-datepicker-input {
+    visibility: hidden;
+    position: absolute;
+
+    &:invalid {
+      color: $eniRougeNormal;
+
+      & ~ .eni-datepicker .eni-datepicker-box {
+        border-color: $eniRougeNormal;
+        color: $eniRougeNormal;
+        & svg path:nth-child(1) {
+          fill: $eniRougeNormal;
+        }
+      }
+    }
+
+    &:focus:invalid ~ .error-message {
+      display: block;
+      color: $eniRougeNormal;
+      @extend %TextNormal;
+    }
+    &:invalid ~ .error-message {
+      display: block;
+      color: $eniRougeNormal;
+      @extend %TextNormal;
+    }
+    & ~ .eni-datepicker-label {
+      display: block;
+      color: $eniGrisDarkest;
+      font-family: $OpenSansSemiBold;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    &:required {
+      & ~ .eni-datepicker-label:after {
+        content: " *";
+        color: $eniRougeNormal;
+        @extend %TextSemiBoldNormal;
+      }
+    }
+    &:not(:disabled) ~ .eni-datepicker .eni-datepicker-box:hover {
+      cursor: pointer;
+      border-color: $eniJauneNormal;
+      color: $eniGrisNormal;
+    }
+    &:disabled {
+      & ~ .eni-datepicker .eni-datepicker-box {
+        border: solid 2px $eniGrisNormal !important;
+        background-color: $eniGrisLightest !important;
+      }
+      & ~ .eni-datepicker-label {
+        color: $eniGrisLighter;
+      }
+    }
+  }
+  .error-message-DateRange {
+    display: block;
+    color: $eniRougeNormal;
+    @extend %TextNormal;
+  }
+  .eni-datepicker {
+    width: 312px;
+    height: 48px;
+    position: relative;
+
+    .eni-datepicker-box {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      text-align: unset;
+      padding: 12px;
+      border-radius: 4px;
+      border: solid 1px $eniGrisDarker;
+      .eni-text-container {
+        display: flex;
+        align-items: center;
+        .separator {
+          margin: 8px;
+          width: 12px;
+          height: 1px;
+          background-color: $eniGrisNormal;
+        }
+        input {
+          width: 114px;
+          @extend %TextNormal;
+          border: unset;
+          background-color: unset;
+          &:focus {
+            outline: none;
+            border: unset;
+            background-color: unset;
+          }
+          &[type="date"]::-webkit-inner-spin-button {
+            display: none;
+          }
+          &[type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
+          }
+          &[type="date"] {
+            display: block;
+            word-wrap: break-word;
+            columns: 5;
+            column-gap: 0.2em;
+          }
+        }
+      }
+
+      svg {
+        position: absolute;
+        right: 12px;
+      }
+      &.eni-datepicker-box-open {
+        cursor: pointer;
+        border-color: $eniJauneNormal;
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .eni-datepicker-box-open {
+      .eni-text-container {
+        input::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 1px;
+          height: 16px;
+          background-color: $eniGrisNormal;
+        }
+      }
+    }
+  }
+}
+.RangeDate {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  align-items: center;
+  position: relative;
+}
+
+.react-datepicker__input-container {
+  max-width: 211px;
+}
+
+.react-datepicker__input-container::after {
+  content: "";
+  display: block;
+  // background-image: url('../assets/icons/calendar.svg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #ffd300 !important;
+}
+
+.react-datepicker {
+  box-shadow: 0px 15px 16px rgb(0 0 0 / 20%);
+}
+
+/** Date range picker style **/
+.rdrDateRangePickerWrapper {
+  display: block;
+
+  max-width: 648px;
+  max-height: 376px;
+  position: relative;
+}
+.rdrDefinedRangesWrapper {
+  display: none;
+}
+.rdrWeekDays {
+  span {
+    @extend %TextSemiBoldNormal;
+  }
+}
+.rdrDays button.rdrDay {
+  background-color: $eniBlanc;
+  @extend %TextSemiBoldNormal;
+  color: $eniGrisDarker;
+}
+.rdrDay:not(.rdrDayPassive):not(.rdrDayDisabled) {
+  border: 1px solid $eniGrisLightest !important;
+  span.rdrDayNumber span {
+    color: $eniGrisDarker !important;
+  }
+}
+
+.rdrDay.rdrDayPassive {
+  @extend %TextSemiBoldNormal;
+  color: $eniGrisLightest;
+}
+.rdrDay.rdrDayDisabled {
+  .rdrDayNumber {
+    span {
+      color: $eniGrisLightest !important;
+    }
+  }
+}
+.rdrSelected,
+.rdrInRange,
+.rdrStartEdge,
+.rdrEndEdge {
+  background: currentColor;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.rdrStartEdge {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  left: 0px !important;
+}
+.rdrEndEdge {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  right: 0px;
+}
+.rdrDayStartOfMonth .rdrInRange,
+.rdrDayStartOfMonth .rdrEndEdge,
+.rdrDayStartOfWeek .rdrInRange,
+.rdrDayStartOfWeek .rdrEndEdge {
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  left: 0px !important;
+}
+.rdrDayEndOfMonth .rdrInRange,
+.rdrDayEndOfMonth .rdrStartEdge,
+.rdrDayEndOfWeek .rdrInRange,
+.rdrDayEndOfWeek .rdrStartEdge {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  right: 0px !important;
+}
+.rdrDayHovered .rdrDayNumber:after {
+  content: "";
+  border-radius: 0 !important;
+  position: absolute;
+  top: 0px !important;
+  bottom: 0px !important;
+  left: 0px !important;
+  right: 0px !important;
+}
+.rdrDayStartPreview,
+.rdrDayInPreview,
+.rdrDayEndPreview {
+  background: rgba(255, 255, 255, 0.09);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  pointer-events: none;
+  border: 0px solid currentColor;
+  z-index: 1;
+}
+.rdrDayStartOfMonth,
+.rdrDayStartOfWeek {
+  .rdrDayInPreview,
+  .rdrDayEndPreview {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-left-width: 0px !important;
+    left: 0px !important;
+  }
+}
+
+.rdrDayEndOfMonth,
+.rdrDayEndOfWeek {
+  .rdrDayInPreview,
+  .rdrDayStartPreview {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-right-width: 0px !important;
+    right: 0px !important;
+  }
+}
+.rdrCalendarWrapper {
+  width: 100%;
+}
+.rdrMonths.rdrMonthsHorizontal {
+  margin-top: 25px;
+}
+.rdrMonthAndYearWrapper {
+  position: absolute;
+  width: 100%;
+  background: #dfe0e0;
+}
+.rdrMonthAndYearWrapper .rdrMonthAndYearPickers {
+  display: none;
+}
+.rdrMonth .rdrMonthName {
+  position: relative;
+  z-index: 999;
+  text-align: center;
+  color: #000;
+}
+
+span.rdrWeekDay {
+  color: #000;
+  font-weight: bolder;
+}
+
+
+body,#root,.EniDatePicker{
+  min-height: 100vh;
+}
+.Date-picker-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.rdrDateRangePickerWrapper{
+  pointer-events: all;
+  z-index: 1;
+}
+.Date-picker-out{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+button.rdrPprevButton,
+button.rdrNextButton {
+  pointer-events: all;
+  z-index: 9999;
+  cursor: pointer;
+  background: none;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ i{
+   display: none;
+ }
+ &:hover{
+   background: none;
+ }
+}
+
+button.rdrPprevButton:before {
+  position: absolute;
+
+  display: block;
+  width: 32px;
+  height: 27px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBzdHlsZT0iLW1zLXRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7IC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiIHZpZXdCb3g9IjAgMCAxNiAxNiI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNOS43OCAxMi43OGEuNzUuNzUgMCAwIDEtMS4wNiAwTDQuNDcgOC41M2EuNzUuNzUgMCAwIDEgMC0xLjA2bDQuMjUtNC4yNWEuNzUuNzUgMCAwIDEgMS4wNiAxLjA2TDYuMDYgOGwzLjcyIDMuNzJhLjc1Ljc1IDAgMCAxIDAgMS4wNnoiIGZpbGw9IiMwMDAwMDAiLz48L3N2Zz4=");
+  content: "";
+}
+
+button.rdrNextButton:before {
+  position: absolute;
+
+  display: block;
+  width: 32px;
+  height: 27px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBzdHlsZT0iLW1zLXRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7IC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTsiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiIHZpZXdCb3g9IjAgMCAxNiAxNiI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNi4yMiAzLjIyYS43NS43NSAwIDAgMSAxLjA2IDBsNC4yNSA0LjI1YS43NS43NSAwIDAgMSAwIDEuMDZsLTQuMjUgNC4yNWEuNzUuNzUgMCAwIDEtMS4wNi0xLjA2TDkuOTQgOEw2LjIyIDQuMjhhLjc1Ljc1IDAgMCAxIDAtMS4wNnoiIGZpbGw9IiMwMDAwMDAiLz48L3N2Zz4=");
+  content: "";
+}
+
+
+.rdrMonth .rdrMonthName {
+  top: 0px;
+  padding: $MargeXSmall;
+  @extend %TextSemiBoldXlarge;
+}
+.rdrMonth {
+  padding: $MargeMedium;
+}
+.rdrMonthAndYearWrapper {
+  height: unset;
+}
+.rdrMonths.rdrMonthsHorizontal {
+  margin-top: unset;
+}
+
+.rdrSelected,
+.rdrInRange,
+.rdrStartEdge,
+.rdrEndEdge {
+  top: 0px!important;
+  left: 0!important;
+  right: 0!important;
+  bottom: 0px!important;
+  border-top-right-radius: 0px!important;
+  border-bottom-right-radius: 0px!important;
+
+}
+.rdrDayNumber{
+  span{
+    &:after{
+      display:none;
+    }
+  }
+}
+.rdrMonthAndYearWrapper{
+  padding: $MargeXSmall;
+}
+.rdrMonth{
+  // margin-top: $MargeXSmall!important;
+  // line-height: 0px!important;
+  // padding-bottom: 10px!important;
+  padding-top: unset!important;
+  padding-right:calc(#{$MargeMedium}/2)!important;
+  padding-left:calc(#{$MargeMedium}/2)!important;
+
+}
+.rdrDayInPreview,.rdrDayEndPreview,.rdrDayStartPreview{
+  border: 1px solid $eniBleuClairDarkest!important;
+
+   border-radius: unset!important;
+   top: -1px!important;
+   bottom: -1px!important;
+   left: -1px;
+   right: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+
+}

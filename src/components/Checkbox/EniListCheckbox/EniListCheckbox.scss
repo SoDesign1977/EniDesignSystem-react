@@ -13,8 +13,7 @@
     .eni-group-checkbox-label {
       display: block;
       color: $eniGrisDarkest;
-      font-family: $OpenSansSemiBold;
-      font-size: 16px;
+      @extend %TextSemiBoldNormal;
       margin-bottom: 8px;
     }
     
@@ -22,8 +21,7 @@
     .eni-checkbox-input:required ~ .eni-group-checkbox-label:after {
       content: " *";
       color: $eniRougeNormal;
-      font-family: $OpenSansSemiBold;
-      font-size: 16px;
+      @extend %TextSemiBoldNormal;
     }
   
     .eni-checkbox-input:disabled ~ .eni-group-checkbox-label {

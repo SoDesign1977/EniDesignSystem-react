@@ -1,0 +1,16 @@
+.eni-notation {
+  width: 341px;
+  height: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &.black {
+    background-color: $eniNoir;
+  }
+  svg {
+    width: 48px;
+    height: 48px;
+    margin: 8px;
+  }
+}
