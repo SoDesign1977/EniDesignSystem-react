@@ -18,6 +18,7 @@ checkbox:[
   },
   {
     title: "Test2",
+    checked:true
   },
   {
     title: "Test3",
@@ -29,6 +30,8 @@ checkbox:[
   },
   {
     title: "Test5",
+    checked:true,
+    disabled:true
   },
 ],
 required: true

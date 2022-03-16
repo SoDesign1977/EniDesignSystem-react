@@ -1,0 +1,40 @@
+.eni-link{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+&.disabled{
+    a{
+        user-select: none;
+        pointer-events: none;
+        cursor: unset;
+        color: $Grey500;
+        svg path{
+            fill: $Grey500;
+        }
+    }
+}
+    a{
+        display: flex;
+        align-items: center;
+        color: $Blue500;
+        @extend %TextNormal; 
+        &:hover{
+            color: $Blue800;
+        }
+        &:focus{
+            border: 1px solid $Blue800;
+        }
+        svg{
+            width: 12px;
+            height: 12px;
+         
+            path {
+                fill:$Blue800
+            }
+            left: 100%;
+            margin-left: 6px;
+        }
+    }
+
+    
+}

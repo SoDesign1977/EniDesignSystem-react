@@ -1,0 +1,193 @@
+/* -----------------------------------------------------|
+|                       COLOR                           
+|------------------------------------------------------*/
+/* NOIR ET BLANC */
+$eniNoir: #000000;
+$eniBlanc: #ffffff;
+
+/* GRIS */
+$eniGrisNormal: #666666;
+$eniGrisLight: #999999;
+$eniGrisLighter: #b2b2b2;
+$eniGrisLightest: #cccccc;
+$eniGrisClair: #dfe0e0;
+$eniGrisClairDark: #d6d7d6;
+$eniGrisClairLight: #e9e9ea;
+$eniGrisClairLighter: #f0f0f0;
+$eniGrisClairLightest: #f3f3f3;
+$eniGrisDark: #4c4c4c;
+$eniGrisDarker: #333333;
+$eniGrisDarkest: #191919;
+$eniGrisBackgroundModal: #fafafa;
+$eniGrisFilterModal: #00000080;
+$eniGrisShadowModal: #0000004d;
+
+/* BLEU */
+$eniBleuNormal: #006699;
+$eniBleuNormalWithOpacity: #00669914;
+$eniBleuClairDark: #aec4da;
+$eniBleuClairDarker: #8babca;
+$eniBleuClairDarkest: #6891ba;
+$eniBleuClairNormal: #d3dfeb;
+$eniBleuClairLight: #f4f7fa;
+$eniBleuArdoiseNormal: #0088cc;
+$eniBleuArdoiseDark: #3f5b7d;
+$eniBleuArdoiseDarker: #2e435b;
+
+/* JAUNE */
+$eniJauneNormal: #ffd300;
+$eniJauneLight: #ffdc33;
+$eniJauneLighter: #ffe566;
+$eniJauneLightest: #fff8d9;
+
+/* VERT */
+$eniVertDark: #3c781c;
+$eniVertDarkWithOpacity: #3c781c14;
+$eniVertForet: #016742;
+$eniVertForetWithOpacity: #01674214;
+
+/* ROUGE */
+$eniRougeNormal: #d0003e;
+$eniRougeNormalWithOpacity: #d0003e14;
+
+/* ORANGE */
+$eniOrange: #ed8817;
+$eniOrangeWithOpacity: #ed881714;
+/* -----------------------------------------------------|
+|                       COLOR                        
+|------------------------------------------------------*/
+/* -----------------------------------------------------|
+|                       Couleurs primaires                      
+|------------------------------------------------------*/
+$Black: #000;
+$White: #fff;
+$LinearMainLogo: linear-gradient(
+  45.12deg,
+  #009e62 0.29%,
+  #009e62 23.58%,
+  #95b849 67.45%,
+  #a7bc3c 74.54%,
+  #d7c51b 88.75%,
+  #ffcd00 99.6%
+);
+/* -----------------------------------------------------|
+|                       Nuances primaires                       
+|------------------------------------------------------*/
+
+$Yellow50: #fff9e3;
+$Yellow100: #ffeda7;
+$Yellow150: #ffdc4d;
+$Yellow200: #ffcd00;
+$Yellow300: #e8b503;
+$Yellow400: #cb9e03;
+$Yellow500: #ad8502;
+$Yellow600: #8f6d02;
+$Yellow700: #775b01;
+$Yellow800: #5f4701;
+$Yellow900: #4c3801;
+
+$LightGreen50: #f8faf3;
+$LightGreen100: #eef4e3;
+$LightGreen150: #e1ebcc;
+$LightGreen200: #ffcd00;
+$LightGreen300: #cddeaa;
+$LightGreen400: #95b849;
+$LightGreen500: #78953b;
+$LightGreen600: #637a30;
+$LightGreen700: #526628;
+$LightGreen800: #415020;
+$LightGreen900: #333f19;
+
+$DarkGreen50: #f5fbf9;
+$DarkGreen100: #e2f4ed;
+$DarkGreen150: #c9eade;
+$DarkGreen200: #acdfcc;
+$DarkGreen300: #79ccac;
+$DarkGreen400: #43b88b;
+$DarkGreen500: #009e62;
+$DarkGreen600: #008351;
+$DarkGreen700: #006d44;
+$DarkGreen800: #005736;
+$DarkGreen900: #00452b;
+
+$Grey50: #fafafa;
+$Grey100: #f0f0f0;
+$Grey200: #d4d4d4;
+$Grey300: #bcbcbc;
+$Grey400: #a4a4a4;
+$Grey500: #8b8b8b;
+$Grey600: #727272;
+$Grey700: #626262;
+$Grey800: #3f3f3f;
+$Grey900: #191919;
+
+/* -----------------------------------------------------|
+|                       Couleurs secondaires                   
+|------------------------------------------------------*/
+
+$Link1: #7fa545;
+$Link2: #8eb746;
+$Link3: #c4d59d;
+$Link4: #d7e1be;
+$Link5: #55791e;
+
+$LinkBusiness1: #056b69;
+$LinkBusiness2: #08b4b1;
+$LinkBusiness3: #69a6a5;
+$LinkBusiness4: #9bc3c3;
+$LinkBusiness5: #044a48;
+
+$FastEnergy1: #5b5b5b;
+$FastEnergy2: #727171;
+$FastEnergy3: #b8b8b8;
+$FastEnergy4: #d4d4d4;
+$FastEnergy5: #f8ca00;
+
+$Insurance1: #dba223;
+$Insurance2: #f0bc25;
+$Insurance3: #f3dd9b;
+$Insurance4: #f8ebc1;
+$Insurance5: #bc8200;
+
+$Discount1: #21ad72;
+$Discount2: #bee6d5;
+$Discount3: #d7f0e5;
+
+$Moving1: #917ba8;
+$Moving2: #a892bd;
+$Moving3: #d1c8dc;
+$Moving4: #e4ddea;
+$Moving5: #81698f;
+
+$MyEnergy1: #d33755;
+$MyEnergy2: #e73b57;
+$MyEnergy3: #e7a0ac;
+$MyEnergy4: #f0c5cb;
+
+$DoubleSafety1: #00669e;
+$DoubleSafety2: #0473b8;
+$DoubleSafety3: #8bb8d8;
+$DoubleSafety4: #b8d4e7;
+
+$Boiler: #e00714;
+
+$CustomizedDiscount: #e66359;
+
+$Regulatory1: #8992a4;
+$Regulatory2: #e2e7ef;
+/* -----------------------------------------------------|
+|                       Couleurs Fond                   
+|------------------------------------------------------*/
+$FuturGrey: #f1f5f4;
+$FriendlyBeige: #f7f4ee;
+$BGGrey: #f4f4f4;
+/* -----------------------------------------------------|
+|                       Couleurs Alert                  
+|------------------------------------------------------*/
+$Blue500: #006699;
+$Blue800: #004466;
+$Red500: #D0021B;
+$Red800: #9A0114;
+$Orange500: #FE942D;
+$Orange800: #D2712D;
+

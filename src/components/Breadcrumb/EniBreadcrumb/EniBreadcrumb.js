@@ -9,7 +9,7 @@ export default function EniBreadcrumb({message,arianne =[{}]}) {
 			<span className="eni-breadcrumb-label">{message}</span>
 				{
 					arianne.map((el,index)=>{
-						return <a href={el.link} className={`eni-breadcrumb-level`} aria-current={index+1 === arianne.length ? "page" : ""} >{el.title}</a>
+						return <a href={el.link} className={`eni-breadcrumb-level`} aria-current={index+1 === arianne.length ? "page" : ""} ><span>{el.title}</span></a>
 					})
 				}
 		</div>

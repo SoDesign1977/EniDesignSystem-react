@@ -1,99 +1,112 @@
-
 .eni-group-checkbox {
-    width: fit-content;
-    .eni-checkbox-input {
-      width: 0;
-      height: 0;
-      appearance: none;
-      position: absolute;
-      border: unset;
-      outline: none;
-    }
-  
-    .eni-group-checkbox-label {
-      display: block;
-      color: $eniGrisDarkest;
-      @extend %TextSemiBoldNormal;
-      margin-bottom: 8px;
-    }
-    
-
-    .eni-checkbox-input:required ~ .eni-group-checkbox-label:after {
-      content: " *";
-      color: $eniRougeNormal;
-      @extend %TextSemiBoldNormal;
-    }
-  
-    .eni-checkbox-input:disabled ~ .eni-group-checkbox-label {
-      color: $eniGrisLighter;
-    }
-  
-    .eni-checkbox-input:disabled ~ .eni-group-checkbox-label:after {
-      color: $eniGrisLighter;
-    }
-    li {
-      cursor: pointer;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      min-height: 18px;
-      margin: 4px;
-      overflow-wrap: anywhere;
-      margin-bottom: 32px;
-      &:focus {
-        border: 1px solid $eniBleuNormal;
-      }
-      span {
-        margin-left: 8px;
-        @extend %TextNormal;
-      }
-      &:not(.selected) svg {
-        visibility: hidden;
-      }
-      &.selected svg {
-        position: absolute;
-        right: 8px;
-      }
-      &.disabled {
-        color: $eniGrisLighter;
-        cursor: unset;
-      }
-      &.disabled:hover {
-        background-color: unset;
-      }
-      & .checkbox {
-       
-        cursor: pointer;
-        appearance: none;
-        background-color: unset;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 8px;
-        width: 24px;
-        height: 24px;
-        border: 1px solid $eniJauneNormal;
-      }
-      &:not(.selected) .checkbox svg {
-        visibility: hidden;
-      }
-      &.selected .checkbox svg {
-        right: unset;
-  
-        path {
-          fill: $eniGrisDarker;
-        }
-      }
-      &.selected .checkbox {
-        border: 2px solid $eniJauneNormal;
-      }
-      &.disabled .checkbox {
-        cursor: unset;
-        border: solid 1px $eniGrisLight;
-        background-color: $eniGrisClairLightest;
-      }
-    }
-  
+  width: fit-content;
+  .eni-checkbox-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    position: absolute;
+    border: unset;
+    outline: none;
   }
-  
+
+  .eni-group-checkbox-label {
+    display: block;
+    color: $Grey900;
+    @extend %TextNormal;
+    margin-bottom: 8px;
+  }
+
+  .eni-checkbox-input:required ~ .eni-group-checkbox-label:after {
+    content: " *";
+    color: red;
+  }
+
+  .eni-checkbox-input:disabled ~ .eni-group-checkbox-label {
+    color: $Grey900;
+    opacity:0.5;
+  }
+
+  .eni-checkbox-input:disabled ~ .eni-group-checkbox-label:after {
+    color: $Grey900;
+    opacity:0.5;
+  }
+  li {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 18px;
+    margin: 4px;
+    overflow-wrap: anywhere;
+    margin-bottom: 32px;
+
+    span {
+      margin-left: 8px;
+      @extend %TextNormal;
+    }
+    &:not(.selected) svg {
+      visibility: hidden;
+    }
+    &.selected svg {
+      position: absolute;
+      right: 8px;
+
+    }
+    &.selected.disabled{
+      path{
+        fill: $Grey600!important;
+      }
+    }
+    &.selected .checkbox {
+      background-color: $Yellow200;
+    }
+    &.disabled {
+      color: $Grey900;
+      span {
+        opacity: 0.5;
+      }
+      cursor: unset;
+    }
+    &.disabled:hover {
+      background-color: unset;
+    }
+    &:not(.selected):not(.disabled):hover .checkbox {
+      border: 1px solid $Yellow200;
+    }
+    &:not(.selected):not(.disabled) .checkbox:focus {
+      border: 2px solid $Yellow200;
+    }
+    & .checkbox {
+      cursor: pointer;
+      appearance: none;
+      background-color: unset;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 8px;
+      width: 24px;
+      height: 24px;
+      border: 1px solid $Grey200;
+      border-radius: 6px;
+    }
+    &:not(.selected) .checkbox svg {
+      visibility: hidden;
+    }
+    &.selected .checkbox svg {
+      right: unset;
+
+      path {
+        fill: $Black;
+      }
+    }
+    &.selected .checkbox {
+      border: 2px solid $Yellow200;
+    }
+    &.disabled .checkbox {
+      cursor: unset;
+      border: solid 1px $Grey200;
+      background-color: $Grey100;
+    }
+  }
+}

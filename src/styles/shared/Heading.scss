@@ -3,39 +3,45 @@
 |                       HEADING  EniExpBol                  
 |------------------------------------------------------*/
 %HeadingXlarge{
-    font-size: 5.25rem;
-    line-height: 1.1;
-    font-family: $EniExpBol;
+    font-family: $SourceSansProSemiBold;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 3.8rem;
 }
 
 %HeadingLarge{
-    font-size: 3.75rem;
-    line-height: 1.1;
-    font-family: $EniExpBol;
+    font-family: $SourceSansProSemiBold;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.3rem;
 }
 %HeadingMedium{
-    font-size: 2.62rem;
-    line-height: 1.3;
-    font-family: $EniExpBol;
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    font-family: $SourceSansProSemiBold;
 }
 %HeadingNormal{
     font-size: 2rem;
-    line-height: 1.3;
-    font-family: $EniExpBol;
+    line-height: 2.6rem;
+    font-family: $SourceSansProSemiBold;
 }
 %HeadingSmall{
     font-size: 1.5rem;
-    line-height: 1.3;
-    font-family: $EniExpBol;
+    line-height: 1.95rem;
+    font-family: $SourceSansProSemiBold;
 }
 %HeadingXsmall{
     font-size: 1.25rem;
-    line-height: 1.5;
-    font-family: $EniExpBol;
+    line-height: 1.87rem;
+    font-family: $SourceSansProSemiBold;
 }
-
 %HeadingXXsmall{
-    font-size: 1.12rem;
-    line-height: 1.5;
-    font-family: $EniExpBol;
+    font-size: 1.125rem;
+    line-height: 1.62rem;
+    font-family: $SourceSansProSemiBold;
+}
+%HeadingXXXsmall{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: $SourceSansProSemiBold;
 }

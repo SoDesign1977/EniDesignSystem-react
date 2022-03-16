@@ -25,6 +25,13 @@ PrimaryDisabled.args = {
   title: "disabled EniButton",
   disabled: true,
 };
+export const PrimaryDisabledArrow = Template.bind({});
+PrimaryDisabledArrow.args = {
+  state: "primary",
+  title: "disabled EniButton",
+  disabled: true,
+  arrow:true
+};
 export const SecondaryDefault = Template.bind({});
 SecondaryDefault.args = {
   state: "secondary",

@@ -25,3 +25,29 @@
     font-style: normal;
     src: url('../src/styles/assets/fonts/OpenSans-Italic.ttf') format('truetype');
 }
+
+
+@font-face {
+    font-family: 'SourceSansProRegular'; // 400
+    font-weight: normal;
+    font-style: normal;
+    src: url('../src/styles/assets/fonts/SourceSansPro-Regular.otf') format('truetype');
+}
+@font-face {
+    font-family: 'SourceSansProSemibold'; // 600
+    font-weight: normal;
+    font-style: normal;
+    src: url('../src/styles/assets/fonts/SourceSansPro-Semibold.otf') format('truetype');
+}
+@font-face {
+    font-family: 'SourceSansProSemiboldIt';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../src/styles/assets/fonts/SourceSansPro-SemiboldIt.otf') format('truetype');
+}
+@font-face {
+    font-family: 'SourceSansProBold'; //700
+    font-weight: normal;
+    font-style: normal;
+    src: url('../src/styles/assets/fonts/SourceSansPro-Bold.otf') format('truetype');
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import { generateKey } from "../../../js/helpers";
 export default function EniInput({
@@ -7,7 +7,7 @@ export default function EniInput({
   placeholder = "Placeholder",
   disabled = false,
   required = false,
-  name="",
+  name = "",
   errorMessage,
   onChange = () => {},
   ...props
@@ -20,27 +20,32 @@ export default function EniInput({
   };
   return (
     <>
-      <label
-        className={`eni-input-label ${required ? "required" : ""} ${
-          disabled ? "disabled" : ""
+      <div
+        className={`eni-input-container ${
+          value.length > 0 ? "valuefocus" : ""
         }`}
-        htmlFor={id}
       >
-        {title}
-      </label>
-      <input
-        onChange={handleChange}
-        {...props}
-        className={`form-control eni-input`}
-        id={id}
-        name={name}
-        placeholder={placeholder}
-        disabled={disabled}
-        aria-required={required}
-        required={required}
-        value={value}
-      />
-      <span className="error-message">{errorMessage}</span>
+        <input
+          onChange={handleChange}
+          {...props}
+          className={`form-control eni-input`}
+          id={id}
+          name={name}
+          disabled={disabled}
+          aria-required={required}
+          required={required}
+          value={value}
+        />
+        <label
+          className={`eni-input-label ${required ? "required" : ""} ${
+            disabled ? "disabled" : ""
+          } `}
+          htmlFor={id}
+        >
+          {title}
+        </label>
+        <span className="error-message">{errorMessage}</span>
+      </div>
     </>
   );
 }
@@ -48,7 +53,7 @@ EniInput.propTypes = {
   title: PropTypes.string,
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
-  required:PropTypes.bool,
+  required: PropTypes.bool,
   name: PropTypes.string,
   errorMessage: PropTypes.string,
   onChange: PropTypes.func,

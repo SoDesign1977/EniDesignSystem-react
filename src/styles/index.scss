@@ -4,6 +4,7 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 
+@import "./shared/Colors.scss";
 @import "./shared/Helpers.scss";
 @import "./shared/Grid.scss";
 @import "./shared/Heading.scss";
@@ -27,5 +28,5 @@
 @import "../components/TextArea/EniTextArea/EniTextArea.scss";
 @import "../components/Tooltip/EniTooltip/EniTooltip.scss";
 @import "../components/Notation/EniNotation/EniNotation.scss";
-
+@import "../components/Link/EniLink/EniLink.scss";
 @import "../components/DatePicker/EniDatePicker/EniDatePicker.scss";

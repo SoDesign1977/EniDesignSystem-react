@@ -1,10 +1,32 @@
+.eni-input-container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  &.valuefocus{
+    label{
+      @extend %TextXsmall;
+      top:10px;
+      color: $Grey600;
+    }
+    .eni-input{
+      padding-top: 28px;
+      padding-bottom: 8px;
+    }
+  }
+}
+
 .eni-input {
   display: block;
-  padding: 12px;
-  margin-top: 4px;
+  padding: 20px;
+
+
   border-radius: 4px;
-  border: solid 1px $eniGrisDarker;
-  @extend %TextSemiBoldNormal;
+  border: solid 1px $Grey600;
+  @extend %TextNormal;
 }
 
 .eni-input::placeholder {
@@ -12,66 +34,77 @@
 }
 
 .eni-input:disabled {
-  background-color: $eniGrisClairLightest;
+  background-color: $Grey100;
   color: $eniGrisDark;
-  border: solid 1px $eniGrisNormal;
+  border: solid 1px $Grey400;
 }
 
 .eni-input:disabled:hover {
-  border: solid 1px $eniGrisNormal;
+  border: solid 1px $Grey400;
 }
 
 .eni-input:focus {
-  border-color: $eniJauneNormal;
+  border-color: $Yellow200;
   outline: none;
 }
 
 .eni-input:hover {
-  border-color: $eniJauneNormal;
+  border-color: $Yellow200;
 }
 
 .eni-input-label {
   display: block;
-  color: $eniGrisDarkest;
-  font-family: $OpenSansSemiBold;
-  font-size: 16px;
-  margin-bottom: 8px;
+  color: $Grey900;
+  @extend %TextNormal;
+  margin-left: 20px;
+  position: absolute;
+
 }
 
 .eni-input-label.required:after {
   content: " *";
-  color: $eniRougeNormal;
-  @extend %TextSemiBoldNormal;
+  position: absolute;
+  color: $Red500;
+  @extend %TextSmall;
+  top: 0;
+  right: -0.5rem;
 }
 
 .eni-input-label.disabled {
-  color: $eniGrisLighter;
+  color: $Grey600;
 }
 
 .eni-input-label.disabled:after {
-  color: $eniGrisLighter;
+  color: $Grey600;
 }
 
 .eni-input:focus:invalid {
-  color: $eniRougeNormal;
-  border-color: $eniRougeNormal;
+ 
 }
 .eni-input:invalid[value]:not([value=""]) {
-  color: $eniRougeNormal;
-  border-color: $eniRougeNormal;
+  color: $Red500;
+  border-color: $Red500;
+  background-color: rgba($color: $Red500, $alpha: 0.1);
 }
 
 .error-message {
   display: none;
+  position: absolute;
+  top: 100%;
 }
 
 .eni-input:focus:invalid ~ .error-message {
   display: block;
-  color: $eniRougeNormal;
-  @extend %TextNormal;
+  height: fit-content;
+  color: $Red500;
+  @extend %TextSmall;
 }
+.eni-input:invalid[value]:not([value=""]) ~ label {
+  color: $Red500;
+}
+
 .eni-input:invalid[value]:not([value=""]) ~ .error-message {
   display: block;
-  color: $eniRougeNormal;
-  @extend %TextNormal;
+  color: $Red500;
+  @extend %TextSmall;
 }

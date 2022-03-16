@@ -1,83 +1,102 @@
-
 .eni-alert {
-    width: 300px;
-    padding: 12px 16px 12px 12px;
-    border-radius: 4px;
-	margin-bottom: 20px;
-
+  min-width: 332px;
+  max-width: 544px;
+  padding: 12px 16px 12px 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
 }
 
 .eni-alert svg {
-    width: 32px;
-    height: 32px;
-	display: inline-block;
-	vertical-align: top;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: top;
 }
-.eni-solo-arrow{
-	position: absolute;
-	top: calc(50% - 3px);
-	right: 6px;
-
+.eni-solo-arrow {
+  position: absolute;
+  top: calc(50% - 3px);
+  right: 6px;
 }
 .eni-alert-message {
-	width: 85%;
-	height: 100%;
-	display: inline-block;
-    margin-left: 8px;
-	margin-top: 5px;
-	@extend %TextNormal;
-	position: relative;
+  width: 85%;
+  height: 100%;
+  &.inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  margin-left: 8px;
+  margin-top: 5px;
+  @extend %TextNormal;
+  position: relative;
 }
 
 .eni-alert span {
-	display: block;
+  display: block;
+  width: fit-content;
 }
 
 .eni-alert-link {
-	margin-top:	8px;
-	cursor: pointer;
-	text-decoration: none;
-	@extend %TextSemiBoldNormal;
+  // margin-top:	8px;
+  cursor: pointer;
+  text-decoration: none;
+  @extend %TextSemiBoldNormal;
 }
 
-.eni-alert-link:hover {
-	text-decoration: underline !important;
-}
 
-.eni-alert-link:focus {
-	text-decoration: underline !important;
-}
+
 
 .eni-alert-info {
-    background-color: $eniBleuNormalWithOpacity;
-    color: $eniBleuNormal;
+  background-color:rgba($color: $Blue500, $alpha: 0.08);
+  color: $Blue500;
 }
 
 .eni-alert-info .eni-alert-link {
-	color: $eniBleuNormal;
-}
+	color: $Blue500;
+	&:hover{
+		color: $Blue800;
+	}
+	&:focus{
+		color: $Blue800;
+	}
+  }
+
 
 .eni-alert-success {
-    background-color: $eniVertDarkWithOpacity;
-    color: $eniVertDark;
+  background-color:rgba($color: $LightGreen400, $alpha: 0.08);
+  color: $LightGreen600;
 }
 
 .eni-alert-success .eni-alert-link {
-    color: $eniVertDark;
-}
+	color: $LightGreen600;
+	&:hover{
+		color: $LightGreen800;
+	}
+	&:focus{
+		color: $LightGreen800;
+	}
+  }
 
 .eni-alert-error {
-    background-color: $eniRougeNormalWithOpacity;
-    color: $eniRougeNormal;
+  background-color: rgba($color: $Red500, $alpha: 0.08);
+  color:$Red500;
 }
 
 .eni-alert-error .eni-alert-link {
-    color: $eniRougeNormal;
+  color: $Red500;
+  &:hover{
+	  color: $Red800;
+  }
+  &:focus{
+	  color: $Red800;
+  }
 }
 
 .eni-alert-icon {
-    width: 18px !important;
-    height: 9px !important;
-	vertical-align: middle !important;
-	margin-left: 5px;
+  width: 18px !important;
+  height: 9px !important;
+  vertical-align: middle !important;
+  margin-left: 5px;
 }

@@ -1,120 +1,113 @@
-/* -----------------------------------------------------|
-|                       TEXT  OpenSansRegular                  
+    /* -----------------------------------------------------|
+|                       TEXT  SourceSansPro                  
 |------------------------------------------------------*/
 %TextXlarge{
     font-size:1.25rem;
-    line-height: 1.5;
-    font-family: $OpenSansRegular;
+    line-height: 1.68rem;
+    font-family: $SourceSansPro;
 }
 %TextLarge{
-    font-size: 1.12rem;
-    line-height: 1.5;
-    font-family: $OpenSansRegular;
+    font-size: 1.125rem;
+    line-height: 1.68rem;
+    font-family: $SourceSansPro;
 }
 %TextNormal{
     font-size:1rem;
-    line-height: 1.5;
-    font-family: $OpenSansRegular;
+    line-height: 1.5rem;
+    font-family: $SourceSansPro;
 }
 %TextSmall{    
     font-size: 0.87rem;
-    line-height: 1.5;
-    font-family: $OpenSansRegular;
+    line-height: 1.31rem;
+    font-family: $SourceSansPro;
 }
 %TextXsmall{
     font-size: 0.75rem;
-    line-height: 1.5;
-    font-family: $OpenSansRegular;
+    line-height: 1.12rem;
+    font-family: $SourceSansPro;
 }
 
 
 /* -----------------------------------------------------|
-|                       TEXT OpenSansSemiBold                           
+|                       TEXT SourceSansProBold                           
+|------------------------------------------------------*/
+
+%TextBoldXlarge{
+    font-size:1.25rem;
+    line-height: 1.68rem;
+    font-family: $SourceSansProBold;
+}
+%TextBoldLarge{
+    font-size: 1.125rem;
+    line-height: 1.68rem;
+    font-family: $SourceSansProBold;
+}
+%TextBoldNormal{
+    font-size:1rem;
+    line-height: 1.5rem;
+    font-family: $SourceSansProBold;
+}
+%TextBoldSmall{    
+    font-size: 0.87rem;
+    line-height: 1.31rem;
+    font-family: $SourceSansProBold;
+}
+%TextBoldXsmall{
+    font-size: 0.75rem;
+    line-height: 1.12rem;
+    font-family: $SourceSansProBold;
+}
+
+
+
+/* -----------------------------------------------------|
+|                       TEXT SourceSansProSemiBold                           
 |------------------------------------------------------*/
 
 
 %TextSemiBoldXlarge{
     font-size: 1.25rem;
     line-height: 1.5;
-    font-family: $OpenSansSemiBold;
+    font-family: $SourceSansProSemiBold;
 }
 %TextSemiBoldSemiBoldLarge{
     font-size: 1.12rem;
     line-height: 1.5;
-    font-family: $OpenSansSemiBold;
+    font-family: $SourceSansProSemiBold;
 }
 %TextSemiBoldNormal{
     font-size: 1rem;
     line-height: 1.5;
-    font-family: $OpenSansSemiBold;
+    font-family: $SourceSansProSemiBold;
 }
 %TextSemiBoldSmall{    
     font-size: 0.87rem;
     line-height: 1.5;
-    font-family: $OpenSansSemiBold;
+    font-family: $SourceSansProSemiBold;
 }
 %TextSemiBoldXsmall{
     font-size: 0.75rem;
     line-height: 1.5;
-    font-family: $OpenSansSemiBold;
+    font-family: $SourceSansProSemiBold;
 }
 
 /* -----------------------------------------------------|
-|                       TEXT EniExpBol                           
+|                       TEXT SourceSansProSemiboldIt                           
 |------------------------------------------------------*/
 
 
-%TextBoldXlarge{
-    font-size: 1.25rem;
-    line-height: 1.5;
-    font-family: $EniExpBol;
-}
-%TextBoldLarge{
-    font-size: 1.12rem;
-    line-height: 1.5;
-    font-family: $EniExpBol;
-}
-%TextBoldNormal{
-    font-size: 1rem;
-    line-height: 1.5;
-    font-family: $EniExpBol;
-}
-%TextBoldSmall{    
-    font-size: 0.87rem;
-    line-height: 1.5;
-    font-family: $EniExpBol;
-}
-%TextBoldXsmall{
-    font-size: 0.75rem;
-    line-height: 1.5;
-    font-family: $EniExpBol;
-}
-
-/* -----------------------------------------------------|
-|                       TEXT  OpenSansItalic                  
-|------------------------------------------------------*/
-%TextItalicXlarge{
-    font-size: 1.25rem;
-    line-height: 1.5;
-    font-family: $OpenSansItalic;
-}
-%TextItalicLarge{
-    font-size: 1.12rem;
-    line-height: 1.5;
-    font-family: $OpenSansItalic;
-}
 %TextItalicNormal{
     font-size: 1rem;
     line-height: 1.5;
-    font-family: $OpenSansItalic;
+    font-family: $SourceSansProSemiboldIt;
 }
 %TextItalicSmall{    
     font-size: 0.87rem;
     line-height: 1.5;
-    font-family: $OpenSansItalic;
+    font-family: $SourceSansProSemiboldIt;
 }
 %TextItalicXsmall{
     font-size: 0.75rem;
     line-height: 1.5;
-    font-family: $OpenSansItalic;
+    font-family: $SourceSansProSemiboldIt;
 }

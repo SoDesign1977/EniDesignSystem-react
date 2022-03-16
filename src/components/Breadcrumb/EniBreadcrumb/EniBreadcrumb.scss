@@ -6,38 +6,43 @@
 }
 
 .eni-breadcrumb-label {
-  @extend %TextSmall;
-  color: $eniGrisDarkest;
+  @extend %TextXsmall;
+  color: $Grey900;
   margin: 8px 0px;
 }
 
 .eni-breadcrumb-level {
-  @extend %TextSmall;
-  color: $eniNoir;
-  margin: 8px 0px 8px 4px;
+  @extend %TextXsmall;
+  color: $Grey900;
+  margin: 8px 0px 8px 8px;
   text-decoration: none;
 }
 
-.eni-breadcrumb-level:last-child::after {
-  content: "";
-  margin-left: 0px;
-}
 
 .eni-breadcrumb-level::after {
-  content: ">";
-  margin-left: 4px;
+  content: "";
+  width: 1px;
+  height: 8px;
+  background-color: $Black;
+  border-radius: 0.5px;
+  margin-left: 8px;
   display: inline-block;
+}
+.eni-breadcrumb-level:last-child::after {
+  content: "";
+  display: none;
 }
 
 .eni-breadcrumb-level:hover {
   text-decoration: underline;
 }
 
-.eni-breadcrum-level:focus {
-  outline: 2px solid;
-  outline-color: $eniBleuNormal !important;
+.eni-breadcrumb-level:focus span {
+  padding: 2px;
+  border:1px solid $Grey900;
+ 
 }
 
 .eni-breadcrumb-level:last-child {
-  @extend %TextSemiBoldSmall;
+  @extend %TextBoldXsmall;
 }

@@ -29,12 +29,3 @@ WithoutText.args = {
   message: "",
 };
 
-export const Checked = Template.bind({});
-Checked.args = {
-  arianne: [
-    { title: "level 1", link: "https://www.youtube.com/watch?v=h5ehkuiZ9C4" },
-    { title: "level 2", link: "https://www.youtube.com/watch?v=h5ehkuiZ9C4" },
-    { title: "level 3", link: "https://www.youtube.com/watch?v=h5ehkuiZ9C4" },
-  ],
-  message: "Vous êtes ici :",
-};

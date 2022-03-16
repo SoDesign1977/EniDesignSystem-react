@@ -5,7 +5,7 @@
     border-radius: 4px;
     border: none;
     padding: 6px 16px;
-    @extend %TextBoldXlarge;
+    @extend %HeadingXsmall;
     cursor: pointer;
     margin: 16px;
 }
@@ -18,118 +18,105 @@
 }
 
 .primary {
-    background-color: $eniJauneNormal;
-    color: $eniNoir;
+    background-color: $Yellow200;
+    color: $Grey900;
 }
 
 .primary:active {
-    background-color: $eniJauneLightest;
+    background-color: $Yellow150;
 }
 
 .primary:disabled {
-    background-color: $eniGrisClairLighter;
-    color: $eniGrisDark;
+    background-color: $Grey100;
+    color: $Grey500;
+    cursor: unset;
 }
 
 .primary:disabled:hover {
-    background-color: $eniGrisClairLighter;
+    background-color: $Grey100;
+    color: $Grey500;
 }
 
 .primary:hover {
-    background-color: $eniJauneLighter;
+    background-color: $Yellow150;
 }
 
-.primary:focus {
-    border: solid 1.5px $eniBleuNormal;
-    background-color: $eniJauneNormal;
+.primary:focus.primary:active {
+    border: solid 2px $Yellow500;
+    background-color: $Yellow200;
     outline: none;
 }
 
 .secondary {
-    background-color: $eniBleuClairDark;
-    color: $eniNoir;
+    background-color: $DarkGreen200;
+    color: $Grey900;
 }
 
 .secondary:active {
-    background-color: $eniBleuClairLight;
+    background-color: $DarkGreen200;
 }
 
 .secondary:disabled {
-    background-color: $eniGrisClairLighter;
-    color: $eniGrisDark;
+    background-color: $Grey100;
+    color: $Grey500;
+    cursor: unset;
 }
 
 .secondary:disabled:hover {
-    background-color: $eniGrisClairLighter;
+    background-color: $Grey100;
+    color: $Grey500;
 }
 
 .secondary:hover {
-    background-color: $eniBleuClairNormal;
+    background-color: $DarkGreen150;
 }
 
-.secondary:focus {
-    border: solid 1.5px $eniBleuNormal;
-    background-color: $eniBleuClairDark;
+.secondary:focus,.secondary:active {
+    border: solid 2px $DarkGreen500;
+    background-color: $DarkGreen200;
     outline: none;
 }
 
 .tertiary {
-    background-color: $eniBlanc;
-    color: $eniNoir;
-    border: solid 1.5px $eniNoir;
+    background-color: $White;
+    color: $Grey900;
+    border: solid 1px $Grey900;
 
 }
 
-.tertiary:active {
-    background-color: $eniGrisNormal;
-    color: $eniBlanc;
+.tertiary:hover {
+    background-color: $Grey100;
 }
-
 .tertiary:disabled {
-    background-color: $eniGrisClairLighter;
-    color: $eniGrisDark!important;
-    border: solid 1.5px $eniGrisNormal;
+    background-color: $Grey100;
+    color: $Grey500;
+    cursor: unset;
 }
 
-
-
-.tertiary:not(.tertiary:disabled):hover {
-    background-color: $eniNoir;
-    color: $eniBlanc;
-    .eni-button-icon{
-        path{
-            fill: white;
-        }
-    }
-}
 .tertiary:disabled:hover {
-    background-color: $eniGrisClairLighter;
-    color: $eniGrisDark;
-    border: solid 1.5px $eniGrisNormal;
-
+    background-color: $Grey100;
+    color: $Grey500;
 }
-.tertiary:focus {
-    border: solid 1.5px $eniJauneLighter;
-    background-color: $eniBlanc;
-    color: $eniNoir;
+.tertiary:focus,.tertiary:active {
+    border: solid 2px $Grey500;
+    background-color: $Grey100;
+    color: $Grey900;
     outline: none;
 }
 
 .plain {
-    background-color: $eniBlanc;
-    color: $eniNoir;
+    background-color: unset;
+    color: $Grey900;
     border: none;
 }
 
-.plain:active {
-    background-color: $eniGrisClairLighter;
-    color: $eniNoir;
-}
+
 
 .plain:disabled {
     background-color:$eniGrisClairLighter;
     color: $eniGrisDark;
     border: none;
+    cursor: unset;
 }
 
 .plain:disabled:hover {
@@ -139,14 +126,14 @@
 }
 
 .plain:hover {
-    background-color: $eniGrisClairLight;
-    color: $eniNoir;
+    background-color: $White;
+    color: $Grey900;
 }
 
-.plain:focus {
-    border: solid 1.5px $eniBleuNormal;
-    background-color: $eniBlanc;
-    color: $eniNoir;
+.plain:focus,.plain:active {
+    border: solid 2px $Grey500;
+    background-color: unset;
+    color: $Grey900;
     outline: none;
 }
 

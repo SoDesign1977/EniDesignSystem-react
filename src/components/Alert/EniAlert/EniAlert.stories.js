@@ -21,12 +21,14 @@ SuccessLinkText.args = {
   message: "Contenu du message d'information",
   linkMessage: "En savoir plus",
   linkUrl: "http://www.google.fr",
+  inline:true,
 };
 
 export const ErrorDefault = Template.bind({});
 ErrorDefault.args = {
   state: "error",
   message: "Contenu du message d'information",
+ 
 };
 
 export const ErrorLinkText = Template.bind({});
@@ -35,6 +37,7 @@ ErrorLinkText.args = {
   message: "Contenu du message d'information",
   linkMessage: "En savoir plus",
   linkUrl: "http://www.google.fr",
+  inline:false,
 };
 
 export const InfoDefault = Template.bind({});
