@@ -20,14 +20,10 @@ export default function EniSwitch({
   },[checked])
   return (
     <>
-      <div className="eni-group-switch"  role="radiogroup">
-        <div
-          className={`eni-switch ${required ? "required" : ""} ${
-            disabled ? "disabled" : ""
-          }`}
-        >
+      <div className="eni-group-switch" role="radiogroup">
+        <div className={`eni-switch ${required ? "required" : ""} ${disabled ? "disabled" : ""}`}>
           <input
-            onClick={()=> setvalue(!value)}
+            onClick={() => setvalue(!value)}
             {...props}
             type="checkbox"
             id={id}
@@ -41,9 +37,9 @@ export default function EniSwitch({
           <span className="eni-slider round"></span>
         </div>
         <label
-          className={`eni-switch-value eni-switch-label ${
-            required ? "required" : ""
-          } ${disabled ? "disabled" : ""}`}
+          className={`eni-switch-value eni-switch-label ${required ? "required" : ""} ${disabled ? "disabled" : ""} ${
+            value ? "selected" : ""
+          }`}
           htmlFor={id}
         >
           {title}

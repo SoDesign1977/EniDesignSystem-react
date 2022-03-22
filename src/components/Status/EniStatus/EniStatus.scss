@@ -1,7 +1,5 @@
-
-
 .eni-status {
-  padding: 4px 12px;
+  padding: 16px 12px;
   border-radius: 4px;
   display: inline-block;
   white-space: nowrap;
@@ -13,31 +11,31 @@
 }
 
 .eni-status-info {
-  background-color: $eniBleuNormalWithOpacity;
-  color: $eniBleuNormal;
-  border: solid 1px $eniBleuNormal;
+  background-color: rgba($color: $Blue500, $alpha: 0.05);
+  color: $Blue500;
+  border: solid 1px $Blue500;
 }
 
 .eni-status-success {
-  background-color: $eniVertForetWithOpacity;
-  color: $eniVertForet;
-  border: solid 1px $eniVertForet;
+  background-color: rgba($color: $DarkGreen600, $alpha: 0.05);
+  color: $DarkGreen600;
+  border: solid 1px $DarkGreen600;
 }
 
 .eni-status-error {
-  background-color: $eniOrangeWithOpacity;
-  color: $eniOrange;
-  border: solid 1px $eniOrange;
+  background-color: rgba($color: $Red500, $alpha: 0.05);
+  color: $Red500;
+  border: solid 1px $Red500;
 }
 
 .eni-status-rejected {
-  background-color: $eniRougeNormalWithOpacity;
-  color: $eniRougeNormal;
-  border: solid 1px $eniRougeNormal;
+  background-color: rgba($color: $Orange500, $alpha: 0.05);
+  color: $Orange500;
+  border: solid 1px $Orange500;
 }
 
 .eni-status-disabled {
-  background-color: $eniGrisClairLight;
-  color: $eniGrisNormal;
-  border: solid 1px $eniGrisNormal;
+  background-color: rgba($color: $Grey500, $alpha: 0.05);
+  color: $Grey500;
+  border: solid 1px $Grey500;
 }

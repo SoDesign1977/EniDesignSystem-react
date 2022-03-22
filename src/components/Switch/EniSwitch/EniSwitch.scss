@@ -25,13 +25,13 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: $eniGrisLighter;
+      background-color: $Grey300;
       -webkit-transition: 0.4s;
       transition: 0.4s;
     }
 
     .eni-switch.disabled .eni-slider {
-      background-color: $eniGrisLightest;
+      background-color: $Grey300;
     }
 
     .eni-slider:before {
@@ -41,16 +41,16 @@
       width: 18px;
       left: 2px;
       bottom: 2px;
-      background-color: $eniBlanc;
+      background-color: $White;
       -webkit-transition: 0.4s;
       transition: 0.4s;
     }
     input:focus ~ .eni-slider:before{
-      border: 3px solid $eniJauneLightest;
+     
       
     }
     .eni-switch.disabled .eni-slider:before {
-      background-color: $eniGrisClair;
+      background-color: $Grey100;
     }
 
     .eni-slider.round {
@@ -62,11 +62,11 @@
     }
 
     input:checked + .eni-slider {
-      background-color: $eniJauneNormal;
+      background-color: $Yellow200;
     }
 
     input:focus + .eni-slider {
-      box-shadow: 0 0 1px $eniJauneNormal;
+      box-shadow: 0 0 1px $Yellow200;
     }
 
     input:checked + .eni-slider:before {
@@ -74,26 +74,30 @@
       -ms-transform: translateX(100%);
       transform: translateX(100%);
     }
+
   }
   
   .eni-switch-label {
+    &.selected{
+        font-family: $SourceSansProSemiBold;
+    }
     display: block;
-    color: $eniGrisDarkest;
-    @extend %TextSemiBoldNormal;
+    color: $Grey900;
+    @extend %TextLarge;
   }
 
   .eni-switch-label.required:after {
     content: " *";
-    color: $eniRougeNormal;
-    @extend %TextSemiBoldNormal;
+    color: $Red500;
+    @extend %TextLarge;
   }
 
   .eni-switch-label.disabled {
-    color: $eniGrisLighter;
+    color: $Grey500;
   }
 
   .eni-switch-label.disabled:after {
-    color: $eniGrisLighter;
+    color: $Grey500;
   }
 
   .eni-switch-value {
