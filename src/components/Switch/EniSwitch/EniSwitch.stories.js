@@ -30,3 +30,10 @@ DisabledSelected.args = {
   disabled:true,
   checked:true
 };
+export const title2 = Template.bind({});
+title2.args = {
+  title: "Label",
+  title2: "Label2",
+  disabled:false,
+  checked:true
+};

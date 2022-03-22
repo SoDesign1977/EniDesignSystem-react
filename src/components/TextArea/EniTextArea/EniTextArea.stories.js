@@ -14,7 +14,7 @@ export const Default = Template.bind({});
 Default.args = {
 
     title: 'Label',
-    placeholder: 'Placeholder',
+
     errorMessage:"errorMessage",
 
 };
@@ -24,7 +24,7 @@ Required.args = {
 
     title: 'Label',
     errorMessage:"this is Required",
-    placeholder: 'Placeholder',
+
     required:true
 
 };
@@ -34,7 +34,7 @@ Disabled.args = {
  
     title: 'Disabled',
     errorMessage:"errorMessage",
-    placeholder: 'Input disabled',
+
     disabled: true,
 
 };
@@ -46,7 +46,7 @@ Error.args = {
     minLength:5,
     required:false,
     maxLength:10,
-    placeholder:"(onChange in the console)",
+
     onChange:(input)=>{
     console.log(input.value)
     },

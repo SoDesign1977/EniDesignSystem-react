@@ -11,6 +11,9 @@
       @extend %TextXsmall;
       top:10px;
       color: $Grey600;
+      &:after{
+        @extend %TextXsmall;
+      }
     }
     .eni-input{
       padding-top: 28px;

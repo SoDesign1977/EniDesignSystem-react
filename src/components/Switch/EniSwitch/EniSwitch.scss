@@ -7,9 +7,12 @@
     display: inline-block;
     width: 40px;
     height: 22px;
+   
     margin-right: 8px;
     pointer-events: none;
-    
+    &.title2{
+      margin-left: 8px;
+    }
     input {
       opacity: 0;
       pointer-events: all;
@@ -31,7 +34,11 @@
     }
 
     .eni-switch.disabled .eni-slider {
+<<<<<<< Updated upstream
       background-color: $Grey300;
+=======
+      background-color: $Grey500;
+>>>>>>> Stashed changes
     }
 
     .eni-slider:before {
@@ -46,11 +53,19 @@
       transition: 0.4s;
     }
     input:focus ~ .eni-slider:before{
+<<<<<<< Updated upstream
      
       
     }
     .eni-switch.disabled .eni-slider:before {
       background-color: $Grey100;
+=======
+      border: 3px solid $Yellow200;
+      
+    }
+    .eni-switch.disabled .eni-slider:before {
+      background-color: $Grey500;
+>>>>>>> Stashed changes
     }
 
     .eni-slider.round {
@@ -83,13 +98,25 @@
     }
     display: block;
     color: $Grey900;
+<<<<<<< Updated upstream
     @extend %TextLarge;
+=======
+    @extend %TextNormal;
+    &.checked{
+      @extend %TextSemiBoldNormal;
+    }
+>>>>>>> Stashed changes
   }
 
   .eni-switch-label.required:after {
     content: " *";
+<<<<<<< Updated upstream
     color: $Red500;
     @extend %TextLarge;
+=======
+    color: $eniRougeNormal;
+
+>>>>>>> Stashed changes
   }
 
   .eni-switch-label.disabled {
@@ -101,7 +128,7 @@
   }
 
   .eni-switch-value {
-    color: $eniGrisDarkest;
+    color: $Grey900;
     @extend %TextNormal;
     vertical-align: top;
   }

@@ -113,16 +113,15 @@
 
 
 .plain:disabled {
-    background-color:$eniGrisClairLighter;
-    color: $eniGrisDark;
+    background-color: $Grey100;
+    color: $Grey500;
     border: none;
     cursor: unset;
 }
 
 .plain:disabled:hover {
-    background-color: $eniGrisClairLighter;
-    color: $eniGrisDark;
-    border: none;
+    background-color: $Grey100;
+    color: $Grey500;
 }
 
 .plain:hover {

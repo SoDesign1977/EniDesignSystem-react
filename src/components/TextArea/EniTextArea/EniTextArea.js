@@ -4,7 +4,6 @@ import { generateKey } from "../../../js/helpers";
 
 export default function EniTextArea({
   title,
-  placeholder = "Placeholder",
   disabled = false,
   required = false,
   errorMessage,
@@ -21,9 +20,11 @@ export default function EniTextArea({
   };
 
   return (
-    <>
-      <div className="eni-textarea-header">
-        <label className={`eni-textarea-label ${required ? "required" : ""} ${ disabled ? "disabled" : ""}`} htmlFor={id}>
+    <div className={`eni-textarea-container ${
+      value.length > 0 ? "valuefocus" : ""
+    } ${ disabled ? "disabled" : ""}`}>
+      <div className={`eni-textarea-header `}>
+        <label className={`eni-textarea-label ${required ? "required" : ""} ${ disabled ? "disabled" : ""} `} htmlFor={id}>
           {title}
         </label>
         <span id="eni-textarea-caract">{maxLength ? (maxLength-value.length) : value.length}</span>
@@ -37,14 +38,14 @@ export default function EniTextArea({
         cols="50"
         id={id}
         name={name}
-        placeholder={placeholder}
         disabled={disabled}
         aria-required={required}
         required={required}
         value={value}
       />
+   
       <span className="error-message">{errorMessage}</span>
-    </>
+    </div>
   );
 }
 EniTextArea.propTypes = {
