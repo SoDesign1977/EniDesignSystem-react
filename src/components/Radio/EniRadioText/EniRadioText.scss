@@ -1,28 +1,27 @@
 .eni-group-radio-text {
   display: flex;
   flex-direction: column;
- 
 }
 
 .eni-group-radio-text-label {
   display: block;
-  color: $eniGrisDarkest;
-  @extend %TextSemiBoldNormal;
+  color: $Grey900;
+  @extend %TextNormal;
   margin-bottom: 8px;
 }
 
-.eni-radio-input ~ .eni-group-radio-text-label:after {
+.eni-radio-input:required ~ .eni-group-radio-text-label:after {
   content: " *";
-  color: $eniRougeNormal;
-  @extend %TextSemiBoldNormal;
+  color: $Red500;
+  @extend %TextNormal;
 }
 
 .eni-group-radio-text-label.disabled {
-  color: $eniGrisLighter;
+  color: rgba($color: $Grey800, $alpha: 0.5);
 }
 
 .eni-group-radio-text-label.disabled:after {
-  color: $eniGrisLighter;
+  color: rgba($color: $Grey800, $alpha: 0.5);
 }
 .eni-radio-input {
   width: 0;
@@ -31,6 +30,7 @@
   position: absolute;
   border: unset;
   outline: none;
+  visibility: hidden;
 }
 
 .eni-radio-text {
@@ -49,6 +49,7 @@
   width: fit-content;
   &::before,
   &::after {
+    background-color: $White;
     position: absolute;
     top: 50%;
     left: 7px;
@@ -56,42 +57,48 @@
     content: "";
   }
   &::before {
-    width: 18px;
-    height: 18px;
-    border: 1px solid $eniGrisDarker;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $Grey800;
     border-radius: 100%;
-
   }
   &[aria-checked="true"]::after {
     display: block;
-    background-color: $eniNoir;
-    width: 8px;
-    height: 8px;
+    background-color: $Black;
+    width: 10px;
+    height: 10px;
     border-radius: 100%;
     transform: translate(20%, -50%);
+    &.disabled {
+      background-color: $Red500;
+    }
   }
-
+  &[aria-checked="true"].disabled::after {
+    background-color: $Grey500;
+  }
   &[aria-checked="true"]::before {
-    border: 2px solid $eniJauneLight;
+    border: 2px solid $Yellow200;
   }
 
-  &:hover::before,
-  &:focus::before {
-    border: 2px solid $eniJauneLight;
+  &:hover::before {
+    border: 1px solid $Yellow200;
   }
- 
-  &.disabled{
+  &:focus::before {
+    border: 2px solid $Yellow200;
+  }
+
+  &.disabled {
     color: $eniGrisLighter;
     cursor: unset;
-    &:before{
-      background-color: $eniGrisClairLighter;
-      border: 1px solid $eniGrisLighter;
+    &:before {
+      background-color: $Grey100;
+      border: 1px solid $Grey500;
     }
     &[aria-checked="true"]::before {
-      border: 2px solid $eniJauneLight;
+      border: 2px solid $Yellow200;
     }
   }
-  span{
+  span {
     margin-left: $MargeXSmall;
   }
 }

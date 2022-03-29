@@ -1,20 +1,36 @@
-.eni-tabs-group {
-  display: flex;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
+
+
+.eni-group-checkbox-tabs-label.disabled {
+  color: $Grey600;
 }
 
-.eni-tabs:disabled {
+.eni-group-checkbox-tabs-label.disabled:after {
+  color: $Grey600;
+}
+.eni-checkbox-tabs-input {
+  width: 0;
+  height: 0;
+  appearance: none;
+  position: absolute;
+  border: unset;
+  outline: none;
+  visibility: hidden;
+
+}
+
+.eni-checkbox-tabs:disabled {
   background-color: $Grey100;
-  span{
+  &::after{
+    background-color: $Grey200!important;
+  }
+  .eni-checkbox-tabs-message label{
     color: $Grey500;
   }
 }
 
-.eni-tabs-group.disabled .eni-tabs {
-}
 
-.eni-tabs {
+.eni-checkbox-tabs {
+  pointer-events: all;
   border-radius: 12px;
   cursor: pointer;
   background-color: $White;
@@ -30,7 +46,7 @@
   margin-top: 24px;
 }
 
-button.eni-tabs:not(:disabled):not(.selected):not(:focus):hover {
+button.eni-checkbox-tabs:not(:disabled):not(.checked):not(:focus):hover {
 
   &:after {
     content: "";
@@ -42,13 +58,13 @@ button.eni-tabs:not(:disabled):not(.selected):not(:focus):hover {
   }
 }
 
-.eni-tabs:disabled .eni-tabs-img img {
+.eni-checkbox-tabs:disabled .eni-checkbox-tabs-img img {
   filter: grayscale(1);
 }
 
-.eni-tabs.selected,
-button.eni-tabs:focus,
-button.eni-tabs:focus-visible {
+.eni-checkbox-tabs.checked,
+button.eni-checkbox-tabs:focus,
+button.eni-checkbox-tabs:focus-visible {
   filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.1));
 
   &:after {
@@ -61,21 +77,22 @@ button.eni-tabs:focus-visible {
   }
 }
 
-.eni-tabs-message {
+.eni-checkbox-tabs-message {
   height: 100%;
   float: left;
   clear: none;
   display: table;
 }
 
-.eni-tabs-message span {
+.eni-checkbox-tabs-message label {
   color: $Grey800;
   @extend %HeadingXsmall;
   display: table-cell;
   vertical-align: middle;
+  pointer-events: none;
 }
 
-.eni-tabs-img {
+.eni-checkbox-tabs-img {
   height: 100%;
   float: left;
   clear: none;
@@ -84,7 +101,7 @@ button.eni-tabs:focus-visible {
   }
 }
 
-.eni-tabs img {
+.eni-checkbox-tabs-img img {
   width: 48px;
   height: 48px;
   margin-right: 8px;
@@ -95,15 +112,4 @@ button.eni-tabs:focus-visible {
 
 img[src=""],img[src="undefined"] {
   display: none;
-}
-
-.eni-tabs-info-group {
-  padding: 10px;
-}
-
-.eni-tabs-info {
-  display: none;
-}
-.eni-tabs-info.display {
-  display: block;
 }

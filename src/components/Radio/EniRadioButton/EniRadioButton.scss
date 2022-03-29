@@ -1,28 +1,27 @@
 .eni-group-radio-button {
   display: flex;
   flex-direction: column;
-
 }
 
 .eni-group-radio-button-label {
   display: block;
-  color: $eniGrisDarkest;
-  @extend %TextSemiBoldNormal;
+  color: $Grey900;
+  @extend %TextNormal;
   margin-bottom: 8px;
 }
 
-.eni-radio-input ~ .eni-group-radio-button-label:after {
+.eni-radio-input:required ~ .eni-group-radio-button-label:after {
   content: " *";
-  color: $eniRougeNormal;
-  @extend %TextSemiBoldNormal;
+  color: $Red500;
+  @extend %TextNormal;
 }
 
 .eni-group-radio-button-label.disabled {
-  color: $eniGrisLighter;
+  color: $Grey500;
 }
 
 .eni-group-radio-button-label.disabled:after {
-  color: $eniGrisLighter;
+  color: $Grey500;
 }
 .eni-radio-input {
   width: 0;
@@ -31,79 +30,76 @@
   position: absolute;
   border: unset;
   outline: none;
+  visibility: hidden;
 }
-.eni-group-radio-button{
-.eni-radio-button {
-  padding: $MargeXSmall;
-  margin: $MargeLarge;
-  background-color: unset;
-  appearance: none;
-  cursor: pointer;
-  border: 1px solid $eniGrisLightest;
-  border-radius: 5px;
-  display: inline-block;
-  position: relative;
-  padding-left: calc($MargeXSmall + $MargeXSmall);
-  @extend %TextNormal;
-  outline: none;
-  width: fit-content;
+.eni-group-radio-button {
+  .eni-radio-button {
+    padding: $MargeXSmall;
+    margin: $MargeLarge;
+    background-color: unset;
+    appearance: none;
+    cursor: pointer;
+    border: 1px solid $Grey800;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    padding-left: calc($MargeXSmall + $MargeXSmall);
+    @extend %TextNormal;
+    outline: none;
+    width: fit-content;
 
-  &::before,
-  &::after {
-    margin-left: $MargeXSmall;
-    position: absolute;
-    top: 50%;
-    left: 7px;
-    transform: translate(-20%, -50%);
-    content: "";
-  }
-  &::before {
-    width: 18px;
-    height: 18px;
-    border: 1px solid $eniGrisDarker;
-    border-radius: 100%;
-
-  }
-  &[aria-checked="true"]::after {
-    display: block;
-    background-color: $eniNoir;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    transform: translate(20%, -50%);
-  }
-
-  &[aria-checked="true"]::before {
-    border: 2px solid $eniJauneNormal;
-
-  }
-  &[aria-checked="true"] span {
-    @extend %TextSemiBoldNormal;
- 
-  }
-  &[aria-checked="true"]{
-    background-color: $eniJauneLightest;
-    border-color: $eniJauneNormal;
-  }
-  &:hover::before,
-  &:focus::before,&:hover {
-    border-color: $eniJauneNormal;
-  }
- 
-  &.disabled{
-    color: $eniGrisLighter;
-    cursor: unset;
-    border-color: $eniGrisNormal;
-    background-color: $eniGrisClairLightest;
-    &:before{
-   
-      border: 1px solid $eniGrisLighter;
+    &::before,
+    &::after {
+      margin-left: $MargeXSmall;
+      position: absolute;
+      top: 50%;
+      left: 7px;
+      transform: translate(-20%, -50%);
+      content: "";
+    }
+    &::before {
+      width: 24px;
+      height: 24px;
+      border: 1px solid $Grey800;
+      border-radius: 100%;
+    }
+    &[aria-checked="true"]::after {
+      display: block;
+      background-color: $Black;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      transform: translate(20%, -50%);
     }
 
+    &[aria-checked="true"]::before {
+      border: 2px solid $Yellow200;
+    }
+    &[aria-checked="true"]:not(:disabled) span {
+      @extend %TextSemiBoldNormal;
+    }
+    &[aria-checked="true"] {
+      background-color: $Yellow50;
+      border-color: $Yellow200;
+    }
+    &:not(:disabled):hover::before,
+    &:focus::before,
+    &:hover {
+      border-color: $Yellow200;
+    }
+
+    &.disabled {
+      color: $Grey600;
+      cursor: unset;
+      border-color: $Grey600;
+      background-color: $Grey100;
+      @extend %TextNormal;
+      &:before {
+      }
+    }
+
+    span {
+      padding-left: $MargeXSmall;
+    }
   }
- 
-  span{
-    padding-left: $MargeXSmall;
-  }
-}
 }

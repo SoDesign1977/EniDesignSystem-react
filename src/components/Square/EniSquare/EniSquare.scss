@@ -1,4 +1,3 @@
-
 .eni-group-square {
   display: flex;
   flex-wrap: wrap;
@@ -6,30 +5,40 @@
 }
 .eni-square-label {
   display: block;
-  color: $eniGrisDarkest;
-  @extend %TextSemiBoldNormal;
+  color: $Grey900;
+  @extend %HeadingXsmall;
   margin-left: 20px;
 }
 
-.eni-square.disabled{
+.eni-square.disabled {
   opacity: 0.5;
+  background-color: $Grey100;
 }
 
 .eni-square-input:required ~ .eni-square-label:after {
   content: " *";
-  color: $eniRougeNormal;
-  @extend %TextSemiBoldNormal;
+  color: $Red500;
+  @extend %TextSmall;
+  top: 0;
+  right: -0.5rem;
 }
 
-.eni-square-input:disabled ~ .eni-square-label{
-  color: $eniGrisLighter;
+.eni-square-input:disabled ~ .eni-square-label {
+  color: $Grey600;
 }
 
 .eni-square-input:disabled ~ .eni-square-label:after {
-  color: $eniGrisLighter;
+  color: $Grey600;
 }
 .eni-square.disabled {
-  border: 3px solid $eniGrisClairLight;
+  button {
+    background-color: $White;
+    border: 3px solid $Grey100;
+  }
+
+  img {
+    filter: grayscale(1);
+  }
 }
 .eni-square-input {
   width: 0;
@@ -51,10 +60,10 @@
   button {
     width: 100%;
     height: 100%;
-    background-color: $eniBlanc;
-    border-radius: 4px;
-    border: 3px solid $eniGrisClairLight;
-
+    background-color: $White;
+    border-radius: 12px;
+    border: 3px solid $Grey100;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -66,6 +75,16 @@
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      top: calc(100% - 3px);
+      left: 0;
+    }
     &:not(.disabled) {
       pointer-events: all;
       cursor: pointer;
@@ -73,29 +92,29 @@
   }
 }
 
-.eni-square-radio:not(.disabled):hover button:not(.selected) {
-  border: 3px solid $eniJauneLightest;
-}
 
-.eni-square-radio button.selected {
-  background-color: white;
-  border: 3px solid $eniJauneNormal;
-  filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));
-}
+
 
 .eni-square-box:hover button:not(.disabled) {
-  border: 3px solid $eniBlanc;
-  border-bottom: 3px solid $eniJauneLightest;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  &:after {
+    background-color: $Yellow100;
+  }
+  border: unset;
 }
 
 .eni-square-box button.selected {
-  border: 3px solid $eniBlanc;
-  border-bottom: 3px solid $eniJauneNormal;
-  filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));
+  &:after {
+    background-color: $Yellow200 !important;
+  }
+  border: unset;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .eni-square-message {
-  color: $eniGrisDarker;
+  color: $Grey900;
+  @extend %HeadingXsmall;
+  min-width: 80px;
   z-index: 1;
   pointer-events: none;
   position: absolute;
@@ -109,9 +128,9 @@
 
 .eni-square img {
   z-index: 1;
-  width: 44px;
-  height: 36px;
+  width: 80px;
+  height: 80px;
   pointer-events: none;
   position: absolute;
-  top: 64px;
+  top: 40px;
 }

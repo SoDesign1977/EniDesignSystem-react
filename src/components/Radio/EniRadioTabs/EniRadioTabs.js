@@ -1,17 +1,17 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import { generateKey } from "../../../js/helpers";
 
-export default function EniRadioText({
+export default function EniRadioTabs({
   title,
   radios = [{ value: "", disabled: false, checked: false }],
   required = false,
-  name="",
+  name = "",
   ...props
 }) {
   const [value, setValue] = React.useState("");
-  const [id, setid] = React.useState(generateKey("EniRadio"));
+  const [id, setid] = React.useState(generateKey("EniRadioTabs"));
 
   React.useEffect(() => {
     radioChecker();
@@ -30,53 +30,62 @@ export default function EniRadioText({
 
   return (
     <fieldset
-      className="eni-group-radio-text"
+      className="eni-group-radio-tabs"
       role="radiogroup"
       aria-labelledby={id}
     >
       <input
-      {...props}
+        {...props}
         name={name}
-        type="text"
-        className={`eni-radio-input`}
+        type="button"
+        className={`eni-radio-tabs-input`}
         required={required}
         minLength="2"
         value={value}
       ></input>
-      <legend id={id} className={`eni-group-radio-text-label `}>
+      <legend id={id} className={`eni-group-radio-tabs-label `}>
         {title}
       </legend>
       {radios.map((element) => {
         let x = generateKey("radio");
         return (
           <button
-            role="radio"
-            key={x}
-            disabled={element.disabled}
-            className={`eni-radio-text ${
+            className={`eni-radio-tabs ${
               element.disabled ? "disabled" : ""
             } ${element.value === value ? "checked" : ""}`}
+            disabled={element.disabled}
             aria-checked={element.value === value ? true : false}
+            role="radio"
+            aria-labelledby={x}
+            key={x}
             onClick={() => {
               if (!element.disabled) {
                 setValue(element.value);
               }
             }}
           >
-            <span>{element.value}</span>
+            <div className="eni-radio-tabs-img">
+              <img src={`${element.icon}`} alt={`Icon`} />
+            </div>
+            <div className="eni-radio-tabs-message">
+              <span id={x}>{element.value}</span>
+            </div>
           </button>
         );
       })}
     </fieldset>
   );
 }
-EniRadioText.propTypes = {
-  title:PropTypes.string,
-  name:PropTypes.string,
-  radios:PropTypes.arrayOf( PropTypes.shape({
-    value: PropTypes.string,
-    disabled: PropTypes.bool,
-    checked: PropTypes.bool,
-    })),
-    required:PropTypes.bool
+EniRadioTabs.propTypes = {
+  title: PropTypes.string,
+  name: PropTypes.string,
+  radios: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string,
+      disabled: PropTypes.bool,
+      checked: PropTypes.bool,
+      icon: PropTypes.string,
+    })
+  ),
+  required: PropTypes.bool,
 };

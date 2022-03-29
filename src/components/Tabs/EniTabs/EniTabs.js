@@ -48,7 +48,7 @@ export default function EniTabs({
             >
               <div className="eni-tabs-img">
                 <img
-                  className="eni-tabs-img"
+                
                   src={`${element.icon}`}
                   alt={`Icon`}
                 />

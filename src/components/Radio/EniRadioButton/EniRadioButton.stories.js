@@ -29,6 +29,8 @@ Default.args = {
     },
     {
       value: "Test5",
+      checked:true,
+      disabled:true
     },
   ],
   required: true,

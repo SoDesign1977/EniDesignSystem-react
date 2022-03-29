@@ -32,7 +32,7 @@ export default function EniNotation({ rate, state }) {
     </div>
   );
 }
-EniInput.propTypes = {
+EniNotation.propTypes = {
   rate: PropTypes.number,
   state: PropTypes.oneOf(["", "black"]),
 };

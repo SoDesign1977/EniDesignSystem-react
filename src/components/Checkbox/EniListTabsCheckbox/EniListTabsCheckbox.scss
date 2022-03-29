@@ -1,0 +1,138 @@
+.eni-group-checkbox {
+  width: fit-content;
+  .eni-checkbox-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    position: absolute;
+    border: unset;
+    outline: none;
+  }
+
+  .eni-group-checkbox-label {
+    display: block;
+    color: $Grey900;
+    @extend %TextNormal;
+    margin-bottom: 8px;
+  }
+
+  .eni-checkbox-input:required ~ .eni-group-checkbox-label:after {
+    content: " *";
+    color: red;
+  }
+
+  .eni-checkbox-input:disabled ~ .eni-group-checkbox-label {
+    color: $Grey900;
+    opacity: 0.5;
+  }
+
+  .eni-checkbox-input:disabled ~ .eni-group-checkbox-label:after {
+    color: $Grey900;
+    opacity: 0.5;
+  }
+  li {
+  
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 18px;
+    margin: 4px;
+    overflow-wrap: anywhere;
+    margin-bottom: 32px;
+
+
+
+    .eni-checkbox-tabs {
+      pointer-events: all;
+      border-radius: 12px;
+      cursor: pointer;
+      background-color: $White;
+      overflow: hidden;
+      border: unset;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      position: relative;
+      margin-right: 24px;
+      padding: 8px 16px;
+      padding-right: 24px;
+      margin-top: 24px;
+
+      .eni-checkbox-tabs-message {
+        height: 100%;
+        float: left;
+        clear: none;
+        display: table;
+      }
+
+      .eni-checkbox-tabs-message span {
+        color: $Grey800;
+        @extend %HeadingXsmall;
+        display: table-cell;
+        vertical-align: middle;
+        pointer-events: none;
+      }
+
+      .eni-checkbox-tabs-img {
+        height: 100%;
+        float: left;
+        clear: none;
+        @media screen and (max-width: map-get($Maxbreakpoints,"Mobile")) {
+          display: none;
+        }
+      }
+
+      .eni-checkbox-tabs-img img {
+        width: 48px;
+        height: 48px;
+        margin-right: 8px;
+        @media screen and (max-width: map-get($Maxbreakpoints,"Mobile")) {
+          margin-right: unset;
+        }
+      }
+
+       .eni-checkbox-tabs-img img[src=""],img[src="undefined"] {
+        display: none;
+      }
+    }
+    .eni-checkbox-tabs:disabled {
+      cursor: unset;
+      background-color: $Grey100;
+      &::after{
+        background-color: $Grey200!important;
+      }
+      .eni-checkbox-tabs-message span {
+        color: $Grey500;
+      }
+    }
+    button.eni-checkbox-tabs:not(:disabled):not(.checked):not(:focus):hover {
+      &:after {
+        content: "";
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        top: calc(100% - 5px);
+        background-color: $Yellow100;
+      }
+    }
+
+    .eni-checkbox-tabs:disabled .eni-checkbox-tabs-img img {
+      filter: grayscale(1);
+    }
+   
+    .eni-checkbox-tabs.checked,
+    button.eni-checkbox-tabs:focus,
+    button.eni-checkbox-tabs:focus-visible {
+      filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.1));
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        top: calc(100% - 5px);
+        background-color: $Yellow200;
+      }
+    }
+  }
+}

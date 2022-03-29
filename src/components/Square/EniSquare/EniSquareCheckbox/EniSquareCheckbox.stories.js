@@ -12,12 +12,12 @@ const Template = (args) => <EniSquareCheckbox {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   title:"Oui",
-  icon:require("../../../../styles/assets/images/refused.svg"),
+  icon:require("../../../../styles/assets/images/oui.svg"),
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
 disabled:true,
-icon:require("../../../../styles/assets/images/refused.svg"),
+icon:require("../../../../styles/assets/images/oui.svg"),
 title:"disabled"
 };

@@ -11,7 +11,7 @@ const Template = (args) => <EniRadioText {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  title: "RadioButtonxx",
+  title: "RadioButton",
   radios: [
     {
       value: "Test1",

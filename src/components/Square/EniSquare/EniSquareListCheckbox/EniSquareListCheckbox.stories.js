@@ -14,18 +14,18 @@ Default.args = {
   ListSquare :[
     {
       title: "non",
-      icon: require("../../../../styles/assets/images/refused.svg"),
+      icon: require("../../../../styles/assets/images/oui.svg"),
       disabled: true,
     },
     {
       title: "oui",
-      icon: require("../../../../styles/assets/images/success.svg"),
+      icon: require("../../../../styles/assets/images/oui.svg"),
       disabled: false,
     
     },
     {
       title: "yol",
-      icon: require("../../../../styles/assets/images/success.svg"),
+      icon: require("../../../../styles/assets/images/oui.svg"),
       disabled: false,
     
     },

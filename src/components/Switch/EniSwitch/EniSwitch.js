@@ -21,9 +21,6 @@ export default function EniSwitch({
   return (
     <>
       <div className="eni-group-switch" role="radiogroup">
-<<<<<<< Updated upstream
-        <div className={`eni-switch ${required ? "required" : ""} ${disabled ? "disabled" : ""}`}>
-=======
         {title2 && (
           <label
             className={`eni-switch-value eni-switch-label  ${
@@ -39,7 +36,6 @@ export default function EniSwitch({
             disabled ? "disabled" : ""
           } ${title2 ? "title2" : ""}`}
         >
->>>>>>> Stashed changes
           <input
             onClick={() => setvalue(!value)}
             {...props}
@@ -56,15 +52,9 @@ export default function EniSwitch({
         </div>
 
         <label
-<<<<<<< Updated upstream
-          className={`eni-switch-value eni-switch-label ${required ? "required" : ""} ${disabled ? "disabled" : ""} ${
-            value ? "selected" : ""
-          }`}
-=======
           className={`eni-switch-value eni-switch-label ${
             required ? "required" : ""
           } ${disabled ? "disabled" : ""} ${value ? "checked" : ""}`}
->>>>>>> Stashed changes
           htmlFor={id}
         >
           {title}
